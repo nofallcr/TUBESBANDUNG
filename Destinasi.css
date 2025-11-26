@@ -1,0 +1,175 @@
+/* RESET DASAR DAN FONT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a233b; /* Warna latar belakang gelap keseluruhan */
+    color: #fff;
+    min-height: 100vh;
+}
+
+
+/* --- HEADER UTAMA / HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #a0a8b9;
+    font-weight: 400;
+}
+
+/* --- DESTINASI SECTION DAN FILTER --- */
+.destinations-section {
+    padding: 0 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background-color: #3b4255;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn.active {
+    background-color: #5579f3; /* Warna biru dominan saat aktif */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(85, 121, 243, 0.4);
+}
+
+.filter-btn i {
+    margin-right: 8px;
+}
+
+/* --- GRID KARTU DESTINASI --- */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+}
+
+.card {
+    background-color: #273045; /* Warna latar belakang kartu */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    position: relative;
+    height: 200px; /* Tinggi gambar */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.15); /* Latar belakang semi-transparan */
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Badge Halal berwarna hijau */
+.badge.halal {
+    border: 1px solid #7ed56f;
+    color: #7ed56f;
+    background-color: rgba(126, 213, 111, 0.1);
+}
+
+.card-content {
+    padding: 15px 20px 25px;
+    position: relative;
+}
+
+.card-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.location-tag {
+    font-size: 14px;
+    font-weight: 500;
+    color: #a0a8b9;
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffc107; /* Warna bintang kuning */
+    margin-bottom: 10px;
+}
+
+.rating i {
+    margin-right: 5px;
+}
+
+.rating span {
+    color: #a0a8b9;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #c9d1d9;
+    line-height: 1.5;
+}
+
+/* --- Responsif Sederhana --- */
+@media (max-width: 768px) {
+
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
