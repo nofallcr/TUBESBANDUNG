@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinasi - Bandung</title>
-    <link rel="stylesheet" href="Destinasi.css">
+    <link rel="stylesheet" href="Destinasi.css?v=<?= filemtime(__DIR__ . '/Destinasi.css') ?>">
 </head>
 <body>
-
     <?php include 'navbar.php'; ?>
     <main class="content">
         <section class="hero">
             <h1>Destinasi Unggulan</h1>
-            <p>Jelajahi destinasi kota Bandung dengan panduan lokal yang berpengalaman</p>
+            <p>Jelajahi destinasi kota Bandung dengan beberapa rekomendasi unggulan</p>
         </section>
 
         <section class="destinations-section">
             <div class="filter-buttons">
-                <button class="filter-btn active"><i class="fas fa-th-large"></i> Semua</button>
-                <button class="filter-btn">Danau Toba</button>
-                <button class="filter-btn">Berastagi</button>
-                <button class="filter-btn">Gunung Sibayak</button>
+                
+                <button class="filter-btn" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="campuran">Campuran</button>
+                <button class="filter-btn" data-filter="perkotaan">Perkotaan</button>
+                <button class="filter-btn" data-filter="alam">Alam</button>
+                <button class="filter-btn" data-filter="sejarah">Sejarah</button>
             </div>
 
             <div class="destinations-grid">
                 
-                <div class="card">
+                
+                <div class="card" data-category="perkotaan sejarah campuran">
                     <div class="card-image">
-                        <img src="uenk4abchnt8ey6hoajk (1).webp" alt="Danau Toba">
+                        <img src="uenk4abchnt8ey6hoajk (1).webp" alt="Campuran">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -40,9 +42,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                
+                <div class="card" data-category="sejarah campuran">
                     <div class="card-image">
-                        <img src="je3kavfhjhslr3v3cjvm.webp" alt="Pulau Samosir">
+                        <img src="je3kavfhjhslr3v3cjvm.webp" alt="The Great Asia Africa Lembang">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -55,9 +58,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                
+                <div class="card" data-category="alam campuran">
                     <div class="card-image">
-                        <img src="y1ixdq0ldd37mipyyr6d.webp" alt="Berastagi & Sibayak">
+                        <img src="y1ixdq0ldd37mipyyr6d.webp" alt="Dusun Bambu Lembang">
                         <span class="badge halal">STAR</span> 
                         </div>
                     <div class="card-content">
@@ -71,9 +75,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                
+                <div class="card" data-category="alam">
                     <div class="card-image">
-                        <img src="yxh6ehzcddmco2ul9iyn.webp" alt="Gunung Sibayak">
+                        <img src="yxh6ehzcddmco2ul9iyn.webp" alt="Floating Market Lembang">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -86,9 +91,10 @@
                     </div>
                 </div>
                 
-                <div class="card">
+                
+                <div class="card" data-category="campuran alam">
                     <div class="card-image">
-                        <img src="y68a8lekkwmautpq5l5n.webp" alt="Danau Toba">
+                        <img src="y68a8lekkwmautpq5l5n.webp" alt="Farmhouse Lembang">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -101,9 +107,9 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-category="alam">
                     <div class="card-image">
-                        <img src="law9ce4dvwoz0jidvffq.webp" alt="Danau Toba">
+                        <img src="law9ce4dvwoz0jidvffq.webp" alt="Glamping Lakeside Rancabali">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -112,11 +118,103 @@
                             <i class="fas fa-star"></i> 4.0
                             <span>| 45 aktivitas</span>
                         </div>
-                        <p>Terletak enggak jauh dari Kawah Putih Ciwidey maupun Kampung Cai Ranca Upas,  merupakan area glamping yang terletak di sisi Situ Patenggang.</p>
+                        <p>Terletak enggak jauh dari Kawah Putih Ciwidey maupun Kampung Cai Ranca Upas,  merupakan area glamping yang terletak di sisi Situ Patenggang.</p>
                     </div>
                 </div>
 
+                <div class="card" data-category="alam">
+                    <div class="card-image">
+                        <img src="ranca.jpg" alt="Kampung Cai Ranca Upas">
+                        <span class="badge halal">STAR</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Kampung Cai Ranca Upas</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 3.8
+                            <span>| 105 aktivitas</span>
+                        </div>
+                        <p>Jika ingin ke luar kota Bandung, Ciwidey adalah area yang wajib kamu kunjungi! Salah satu tempat wisata paling menarik di Ciwidey adalah Kampung Cai Ranca Upas. Selain punya area perkemahan yang cantik, Kampung Cai Ranca Upas juga punya Peternakan Kuda yang menyenangkan untuk dikunjungi. Selain itu juga ada berbagai permainan outbound yang bisa kamu coba di sana bersama keluarga. Eh, di sini ada kolam pemandian air panas alaminya juga, lho!</p>
+                    </div>
+                </div>
 
+                <div class="card" data-category="alam">
+                    <div class="card-image">
+                        <img src="Alam 2.jpg" alt="Kawah Putih Ciwidey">
+                        <span class="badge halal">STAR</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Kawah Putih Ciwidey</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 5.0
+                            <span>| 30 aktivitas</span>
+                        </div>
+                        <p>Sering melihat Kawah Putih menjadi latar untuk foto-foto yang Instagramable? Well, memang sepopuler itu tempat wisata di Bandung ini. Buat yang belum pernah ke sini, wajib banget setidaknya sekali seumur hidup lihat pemandangan kawah putih</p>
+                    </div>
+                </div>
+                
+                <div class="card" data-category="campuran perkotaan sejarah">
+                    <div class="card-image">
+                        <img src="perkotaan5.webp" alt="Museum Konfersi Asia Afrika">
+                        <span class="badge halal">STAR</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Museum Konfersi Asia Afrika</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 4.0
+                            <span>| 200 aktivitas</span>
+                        </div>
+                        <p>Museum Konferensi Asia Afrika berada di Jl. Asia Afrika No.65, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat, tepat di dalam kompleks Gedung Merdeka. Museum ini menjadi salah satu tempat bersejarah yang penting, karena di sinilah momen besar Konferensi Asia Afrika tahun 1955 diabadikan. Berada di pusat kota, museum ini mudah diakses dan dikelilingi oleh bangunan-bangunan klasik yang menambah kesan sejarah saat kamu mengunjunginya.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-category="campuran perkotaan sejarah">
+                    <div class="card-image">
+                        <img src="perkotaan2.jpeg" alt="Gedung Pakuan">
+                        <span class="badge halal">STAR</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Gedung Pakuan</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 5.0
+                            <span>| 455 aktivitas</span>
+                        </div>
+                        <p>Pembangunan Gedung Pakuan berlangsung pada tahun 1864-1867. Pada masa kolonial, gedung keresidenan di Bandung tidak memiliki nama istimewa yakni hanya disebut sebagai Woning van Resident te Bandoeng (Kediaman Residen di Bandung). Lokasi Gedung Keresidenan berada di ujung Jalan Karesidenan (Residentweg) yang sekarang dikenal dengan nama Jalan Otto Iskandar Dinata.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-category="perkotaan sejarah">
+                    <div class="card-image">
+                        <img src="perkotaan3.webp" alt="Gedung Sate">
+                        <span class="badge halal">STAR</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Gedung Sate</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 4.5
+                            <span>| 233 aktivitas</span>
+                        </div>
+                        <p>Gedung Sate, yang terletak di pusat Kota Bandung, tepatnya di Jl. Diponegoro No.22, Citarum, Kec. Bandung Wetan, Kota Bandung, Jawa Barat, merupakan salah satu bangunan terkenal yang wajib kamu kunjungi saat berada di kota ini. Bangunan ini dikenal dengan arsitektur uniknya yang memadukan gaya tradisional dan Eropa, ditandai dengan simbol tusuk sate di puncak menaranya yang menjadi ciri khasnya. Daya tarik utama Gedung Sate tidak hanya terletak pada desain arsitekturnya yang klasik, tetapi juga nilai sejarah yang dimilikinya.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-category="perkotaan sejarah">
+                    <div class="card-image">
+                        <img src="perkotaan4.webp" alt="Gedung Merdeka">
+                        <span class="badge halal">STAR</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Gedung Merdeka</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 3.5
+                            <span>| 200 aktivitas</span>
+                        </div>
+                        <p>Gedung Merdeka, yang terletak di Jl. Asia Afrika No.65, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat, adalah salah satu tempat bersejarah yang menjadi kebanggaan kota ini. Gedung ini dikenal sebagai lokasi penyelenggaraan Konferensi Asia Afrika pada tahun 1955, sebuah peristiwa penting yang mempertemukan negara-negara dari kedua benua untuk memperjuangkan kemerdekaan dan solidaritas di tengah kolonialisme. Lokasinya yang strategis di tengah Kota Bandung, dikelilingi bangunan klasik lainnya, membuat Gedung Merdeka menjadi daya tarik bagi wisatawan yang memiliki minat terhadap sejarah.</p>
+                    </div>
+                </div>
+
+                
+                </div>
+                </div>
             </div>
         </section>
 

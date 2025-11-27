@@ -2,13 +2,18 @@
 :root {
     --dark-bg: #1e1e2d;
     --card-bg: #29293e;
-    --primary-color: #5d5dff; /* Warna Biru Ungu untuk tombol utama */
+    --primary-color: #5d5dff; 
     --text-light: #e0e0f0;
     --text-secondary: #a0a0c0;
-    --rating-color: #ffc107; /* Warna Bintang Kuning */
-    --premium-tag: #ff4757; /* Warna Merah untuk Premium */
-    --family-tag: #2ed573; /* Warna Hijau untuk Keluarga */
+    --rating-color: #ffc107; 
+    --harian-tag: #6c5ce7;   
+    --family-tag: #2ed573;   
+    --trip-tag: #ff4757;     
+    
 }
+
+
+
 
 * {
     margin: 0;
@@ -18,7 +23,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1a233b; /* Warna latar belakang gelap keseluruhan */
+    background-color: #1a233b; 
     color: #fff;
     min-height: 100vh;
 }
@@ -29,7 +34,6 @@ body {
     padding: 40px 20px;
 }
 
-/* --- Header & Navigasi Kategori --- */
 .hero-section {
     text-align: center;
     margin-bottom: 40px;
@@ -70,21 +74,18 @@ body {
     color: var(--text-light);
 }
 
-/* --- Grid Kartu Paket --- */
 .package-grid {
     display: grid;
-    /* Membuat grid responsif, minimal 300px per kolom */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
-
-/* --- Gaya Kartu Paket --- */
 .package-card {
     background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .package-card:hover {
@@ -94,7 +95,7 @@ body {
 
 .package-card img {
     width: 100%;
-    height: 200px; /* Tinggi gambar yang konsisten */
+    height: 200px; 
     object-fit: cover;
     display: block;
 }
@@ -113,13 +114,11 @@ body {
     font-size: 0.9em;
     color: var(--text-secondary);
     margin-bottom: 15px;
-    min-height: 40px; /* Menjaga tinggi deskripsi agar kartu tetap rapi */
+    min-height: 40px; 
 }
 
-/* --- Jenis Paket (Tag) --- */
 .package-type {
     display: inline-block;
-    background-color: var(--primary-color);
     color: var(--text-light);
     padding: 5px 10px;
     border-radius: 6px;
@@ -129,15 +128,25 @@ body {
     margin-bottom: 5px;
 }
 
-.package-type.premium {
-    background-color: var(--premium-tag);
+
+.package-type.harian {
+    background-color: var(--harian-tag);
 }
 
 .package-type.family {
     background-color: var(--family-tag);
 }
 
-/* --- Info Harga dan Rating --- */
+.package-type.trip {
+    background-color: var(--trip-tag);
+}
+
+
+.package-type.family {
+    background-color: var(--family-tag);
+}
+
+
 .card-info {
     display: flex;
     justify-content: space-between;
@@ -163,7 +172,6 @@ body {
     color: var(--text-light);
 }
 
-/* --- Tombol Pesan --- */
 .buy-button {
     width: 100%;
     background-color: var(--primary-color);
@@ -178,10 +186,11 @@ body {
 }
 
 .buy-button:hover {
-    background-color: #4a4ae6; /* Sedikit lebih gelap saat hover */
+    background-color: #4a4ae6; 
 }
 
 .buy-button i {
     margin-right: 8px;
 }
 
+                            

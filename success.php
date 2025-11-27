@@ -37,9 +37,9 @@ h2{
 
 <hr>
 
-<p>Silakan lakukan pembayaran sesuai metode pilihan Anda.</p>
+<p>Pembayaran dilakukan setelah kegiatan wisata selesai.</p>
 
-<a href="index.php">Kembali ke Beranda</a>
+<a href="beranda.php">Kembali ke Beranda</a>
 </div>
 
 </body>

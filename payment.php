@@ -47,16 +47,48 @@ h2 {
     margin-bottom: 20px;
 }
 
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.total {
+    font-size: 1.2em;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #27ae60;
+}
+.method {
+    margin-bottom: 20px;
+}
+
+.method-option {
+    padding: 10px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
 </style>
 </head>
 <?php include 'navbar.php'; ?>
 <body>
 
 <div class="container">
-    <div class="header">
-        <h1>Explore Bandung</h1>
-        <p>Bandung Tour</p>
-    </div>
+    
 
     <h2>Pembayaran Tiket Wisata</h2>
 
@@ -89,22 +121,13 @@ h2 {
 
         <div class="method">
             <h3>Metode Pembayaran</h3>
-            
-            <label class="method-option">
-                <input type="radio" name="metode" value="Transfer Bank" required>
-                Transfer Bank (BCA, BRI, Mandiri)
-            </label>
 
-            <label class="method-option">
-                <input type="radio" name="metode" value="E-Wallet">
-                DANA / OVO / Gopay
-            </label>
 
-            <label class="method-option">
-                <input type="radio" name="metode" value="Bayar di Tempat">
-                Bayar di Tempat (COD)
-            </label>
-        </div>
+       <label class="method-option">
+    <input type="radio" name="metode" value="Bayar di Tempat" required>
+    Bayar di Tempat (Dilakukan setelah wisata)
+</label>
+
 
         <button type="submit">
             Konfirmasi Pembayaran
