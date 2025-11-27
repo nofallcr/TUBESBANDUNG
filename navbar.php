@@ -143,15 +143,17 @@
         </div>
     </div>
 
-    <nav class="nav-links">
-        <a href="beranda.php">Beranda</a>
-        <a href="paket.php">Paket Wisata</a>
-        <a href="galeri.php">Galeri</a>
-        <a href="Destinasi.php" class="active">Destinasi</a>
-        <a href="#">Tentang Kami</a>
-        <a href="login_signup.php" class="login-btn">Login</a>
-        <a href="#" class="lang-toggle">🇮🇩 EN</a>
-    </nav>
+<nav class="nav-links">
+    <a href="beranda.php">Beranda</a>
+    <a href="paket.php">Paket Wisata</a>
+    <a href="galeri.php">Galeri</a>
+    <a href="Destinasi.php" >Destinasi</a>
+    <a href="#">Tentang Kami</a>
+    <a href="kontak.php">Kontak Kami</a> 
+    <a href="login_signup.php">Login</a>
+    <a href="#" class="lang-toggle">🇮🇩 EN</a>
+</nav>
+
 
     <div class="hamburger" id="hamburger">
         <div></div>
