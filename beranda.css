@@ -59,6 +59,60 @@
     background: #18a662;
 }
 
+@media (max-width: 768px) {
+    .hero-text {
+        bottom: 10%; /* Naikkan sedikit posisi teks */
+        left: 5%;
+        width: 65%; /* Teks mengambil lebih banyak lebar layar */
+    }
+
+    .hero-text h2 {
+        font-size: 44px; /* Kecilkan judul */
+    }
+
+    .hero-text p {
+        font-size: 18px; /* Kecilkan paragraf */
+    }
+
+    .btn-wa {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Ponsel (Max 600px) */
+@media (max-width: 600px) {
+    .hero {
+        /* Posisikan gambar background lebih ke atas agar subjek utama terlihat */
+        background-position: 35% center; 
+    }
+    
+    .hero-text {
+        bottom: 5%; /* Tempatkan teks di bagian paling bawah */
+        left: 0;
+        right: 0;
+        width: 90%; /* Ambil hampir seluruh lebar layar */
+        margin: 0 auto; /* Tengah-kan blok teks */
+        text-align: center; /* Tengah-kan teks */
+    }
+    
+    .hero-text h2 {
+        font-size: 32px; /* Lebih kecil lagi untuk ponsel */
+        margin-bottom: 10px;
+    }
+
+    .hero-text p {
+        font-size: 16px; 
+    }
+    
+    .btn-wa {
+        display: block; /* Buat tombol memenuhi lebar */
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0;
+    }
+}
+
 .footer {
     background: #0D1B2A;
     color: #fff;
