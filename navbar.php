@@ -120,7 +120,7 @@
         display: none;
         border-left: 1px solid rgba(255,255,255,0.05);
         border-bottom: 1px solid rgba(255,255,255,0.05);
-        z-index: 999; /* tambahkan ini */
+        z-index: 999; 
     }
 
     .nav-links.active {
@@ -129,7 +129,7 @@
 
     .hamburger {
         display: flex;
-        z-index: 1000; /* pastikan hamburger di atas */
+        z-index: 1000; 
     }
 }
 
@@ -161,10 +161,6 @@
 
 
     <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
 </header>
 
 <script>
