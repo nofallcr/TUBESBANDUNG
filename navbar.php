@@ -105,6 +105,8 @@
     transition: 0.3s;
 }
 
+
+
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -112,12 +114,13 @@
         right: 0;
         background: linear-gradient(90deg, #0d162b, #131a2e);
         flex-direction: column;
-       width: 200px;
+        width: 200px;
         padding: 20px;
         gap: 15px;
         display: none;
         border-left: 1px solid rgba(255,255,255,0.05);
         border-bottom: 1px solid rgba(255,255,255,0.05);
+        z-index: 999; /* tambahkan ini */
     }
 
     .nav-links.active {
@@ -126,8 +129,10 @@
 
     .hamburger {
         display: flex;
+        z-index: 1000; /* pastikan hamburger di atas */
     }
 }
+
 </style>
 </head>
 <body>
