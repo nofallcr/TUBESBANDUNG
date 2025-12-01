@@ -248,7 +248,7 @@
                 <li><a href="galeri.php">Galeri</a></li>
                 <li><a href="Destinasi.php">Destinasi</a></li>
                 <li><a href="#">Tentang Kami</a></li>
-                <li><a href="#">Kontak</a></li>
+                <li><a href="hubungi.php">Kontak</a></li>
             </ul>
         </div>
 
