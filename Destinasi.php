@@ -222,7 +222,6 @@
 <script src="Destinasi.js"></script>
 
 </body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <footer class="footer">
     <div class="footer-container">
 
@@ -247,7 +246,7 @@
                 <li><a href="paket.php">Paket Wisata</a></li>
                 <li><a href="galeri.php">Galeri</a></li>
                 <li><a href="Destinasi.php">Destinasi</a></li>
-                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="tentang_kami.php">Tentang Kami</a></li>
                 <li><a href="hubungi.php">Kontak</a></li>
             </ul>
         </div>

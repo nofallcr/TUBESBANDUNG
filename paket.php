@@ -193,7 +193,7 @@
                 <li><a href="paket.php">Paket Wisata</a></li>
                 <li><a href="galeri.php">Galeri</a></li>
                 <li><a href="Destinasi.php">Destinasi</a></li>
-                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="tentang_kami.php">Tentang Kami</a></li>
                 <li><a href="hubungi.php">Kontak</a></li>
             </ul>
         </div>

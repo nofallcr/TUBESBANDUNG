@@ -153,7 +153,7 @@
     <a href="paket.php">Paket Wisata</a>
     <a href="galeri.php">Galeri</a>
     <a href="Destinasi.php" >Destinasi</a>
-    <a href="#">Tentang Kami</a>
+    <a href="tentang_kami.php">Tentang Kami</a>
     <a href="hubungi.php">Kontak Kami</a> 
     <a href="login_signup.php">Login</a>
     <a href="#" class="lang-toggle">🇮🇩 EN</a>
