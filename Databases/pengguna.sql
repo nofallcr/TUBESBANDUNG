@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `user` (
   `Id_user` int(11) NOT NULL,
   `Username` varchar(75) NOT NULL,
+  `email` varchar(75) NOT NULL,
   `Password` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

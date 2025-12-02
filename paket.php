@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pemesanan Paket Wisata</title>
+    <title>Pemesanan Paket Wisata - Explore Bandung</title>
     <link rel="stylesheet" href="paket.css?v=<?= filemtime(__DIR__ . '/paket.css') ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -27,9 +28,8 @@
 
     <div class="package-grid">
 
-        <!-- PAKET HARIAN -->
         <div class="package-card" data-category="harian"> 
-            <img src="uenk4abchnt8ey6hoajk (1).webp" alt="Gambar Braga">
+            <img src="foto/uenk4abchnt8ey6hoajk (1).webp" alt="Gambar Braga">
             <div class="card-content">
                 <span class="package-type harian">Paket Harian</span>
                 <h3>Braga - Kenangan Lama</h3>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="package-card" data-category="harian">
-            <img src="je3kavfhjhslr3v3cjvm.webp" alt="Gambar The Great Asia Africa">
+            <img src="foto/je3kavfhjhslr3v3cjvm.webp" alt="Gambar The Great Asia Africa">
             <div class="card-content">
                   <span class="package-type harian">Paket Harian</span>
                 <h3>Asia Africa - Keliling Dunia</h3>
@@ -76,7 +76,7 @@
 
        
         <div class="package-card" data-category="keluarga">
-            <img src="y1ixdq0ldd37mipyyr6d.webp" alt="Gambar Dusun Bambu Lembang">
+            <img src="foto/y1ixdq0ldd37mipyyr6d.webp" alt="Gambar Dusun Bambu Lembang">
             <div class="card-content">
                 <span class="package-type family">Paket Keluarga</span>
                 <h3>Dusun Bambu - Damai Alam</h3>
@@ -98,7 +98,7 @@
             </div>
         </div>
                     <div class="package-card" data-category="trip">
-            <img src="alam.jpg" alt="alam">
+            <img src="foto/alam.jpg" alt="alam">
             <div class="card-content">
                 <span class="package-type trip">Paket Trip</span>
                 <h3>Trip Alam</h3>
@@ -120,7 +120,7 @@
             </div>
         </div>
                 <div class="package-card" data-category="trip">
-            <img src="sejarah.jpg" alt="sejarah bandung">
+            <img src="foto/sejarah.jpg" alt="sejarah bandung">
             <div class="card-content">
                <span class="package-type trip">Paket Trip</span>
                 <h3>Trip Sejarah</h3>
@@ -142,7 +142,7 @@
             </div>
         </div>
                 <div class="package-card" data-category="keluarga">
-            <img src="ranca.jpg" alt="ranca">
+            <img src="foto/ranca.jpg" alt="ranca">
             <div class="card-content">
                 <span class="package-type family">Paket Keluarga</span>
                 <h3>Kampung Cai Ranca Upas</h3>
@@ -166,10 +166,8 @@
     </div>
 </div>
 
-<script src="paket.js"></script>
-</body>
 <?php include 'ulasan.php'; ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <footer class="footer">
     <div class="footer-container">
 
@@ -232,4 +230,6 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+<script src="paket.js"></script>
+</body>
 </html>

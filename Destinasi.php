@@ -29,7 +29,7 @@
                 
                 <div class="card" data-category="perkotaan sejarah campuran">
                     <div class="card-image">
-                        <img src="uenk4abchnt8ey6hoajk (1).webp" alt="Campuran">
+                        <img src="foto/uenk4abchnt8ey6hoajk (1).webp" alt="Campuran">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -45,7 +45,7 @@
                 
                 <div class="card" data-category="sejarah campuran">
                     <div class="card-image">
-                        <img src="je3kavfhjhslr3v3cjvm.webp" alt="The Great Asia Africa Lembang">
+                        <img src="foto/je3kavfhjhslr3v3cjvm.webp" alt="The Great Asia Africa Lembang">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -61,7 +61,7 @@
                 
                 <div class="card" data-category="alam campuran">
                     <div class="card-image">
-                        <img src="y1ixdq0ldd37mipyyr6d.webp" alt="Dusun Bambu Lembang">
+                        <img src="foto/y1ixdq0ldd37mipyyr6d.webp" alt="Dusun Bambu Lembang">
                         <span class="badge halal">STAR</span> 
                         </div>
                     <div class="card-content">
@@ -78,7 +78,7 @@
                 
                 <div class="card" data-category="alam">
                     <div class="card-image">
-                        <img src="yxh6ehzcddmco2ul9iyn.webp" alt="Floating Market Lembang">
+                        <img src="foto/yxh6ehzcddmco2ul9iyn.webp" alt="Floating Market Lembang">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -94,7 +94,7 @@
                 
                 <div class="card" data-category="campuran alam">
                     <div class="card-image">
-                        <img src="y68a8lekkwmautpq5l5n.webp" alt="Farmhouse Lembang">
+                        <img src="foto/y68a8lekkwmautpq5l5n.webp" alt="Farmhouse Lembang">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -109,7 +109,7 @@
 
                 <div class="card" data-category="alam">
                     <div class="card-image">
-                        <img src="law9ce4dvwoz0jidvffq.webp" alt="Glamping Lakeside Rancabali">
+                        <img src="foto/law9ce4dvwoz0jidvffq.webp" alt="Glamping Lakeside Rancabali">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -124,7 +124,7 @@
 
                 <div class="card" data-category="alam">
                     <div class="card-image">
-                        <img src="ranca.jpg" alt="Kampung Cai Ranca Upas">
+                        <img src="foto/ranca.jpg" alt="Kampung Cai Ranca Upas">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -139,7 +139,7 @@
 
                 <div class="card" data-category="alam">
                     <div class="card-image">
-                        <img src="Alam 2.jpg" alt="Kawah Putih Ciwidey">
+                        <img src="foto/Alam 2.jpg" alt="Kawah Putih Ciwidey">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -154,7 +154,7 @@
                 
                 <div class="card" data-category="campuran perkotaan sejarah">
                     <div class="card-image">
-                        <img src="perkotaan5.webp" alt="Museum Konfersi Asia Afrika">
+                        <img src="foto/perkotaan5.webp" alt="Museum Konfersi Asia Afrika">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -169,7 +169,7 @@
 
                 <div class="card" data-category="campuran perkotaan sejarah">
                     <div class="card-image">
-                        <img src="perkotaan2.jpeg" alt="Gedung Pakuan">
+                        <img src="foto/perkotaan2.jpeg" alt="Gedung Pakuan">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -184,7 +184,7 @@
 
                 <div class="card" data-category="perkotaan sejarah">
                     <div class="card-image">
-                        <img src="perkotaan3.webp" alt="Gedung Sate">
+                        <img src="foto/perkotaan3.webp" alt="Gedung Sate">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -199,7 +199,7 @@
 
                 <div class="card" data-category="perkotaan sejarah">
                     <div class="card-image">
-                        <img src="perkotaan4.webp" alt="Gedung Merdeka">
+                        <img src="foto/perkotaan4.webp" alt="Gedung Merdeka">
                         <span class="badge halal">STAR</span>
                     </div>
                     <div class="card-content">
@@ -219,9 +219,7 @@
         </section>
 
     </main>
-<script src="Destinasi.js"></script>
 
-</body>
 <footer class="footer">
     <div class="footer-container">
 
@@ -284,4 +282,6 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+<script src="Destinasi.js"></script>
+</body>
 </html>

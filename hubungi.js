@@ -1,76 +1,80 @@
-// Menangani pengiriman formulir booking
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+
     
-    // Mengambil nilai dari formulir
-    const fullName = document.getElementById('fullName').value;
-    const travelDate = document.getElementById('travelDate').value;
-    const peopleCount = document.getElementById('peopleCount').value;
-    const pickupLocation = document.getElementById('pickupLocation').value;
-    const package = document.getElementById('package').value;
-    
-    // Validasi sederhana
-    if (!fullName || !travelDate || !peopleCount || !pickupLocation || !package) {
-        alert('Harap isi semua field yang diperlukan!');
-        return;
-    }
-    
-    // Format pesan untuk WhatsApp
-    const message = `Halo Toba Travel, saya ingin melakukan booking dengan detail sebagai berikut:
-    
+    const form = document.getElementById('bookingForm');
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const fullName = getValue('fullName');
+            const travelDate = getValue('travelDate');
+            const peopleCount = getValue('peopleCount');
+            const pickupLocation = getValue('pickupLocation');
+            const packageVal = getValue('package');
+
+            if (!fullName || !travelDate || !peopleCount || !pickupLocation || !packageVal) {
+                alert('Harap isi semua field yang diperlukan!');
+                return;
+            }
+
+            const message = `Halo Toba Travel, saya ingin melakukan booking:
+
 Nama: ${fullName}
 Tanggal Perjalanan: ${formatDate(travelDate)}
 Jumlah Orang: ${peopleCount}
 Lokasi Jemput: ${getLocationText(pickupLocation)}
-Paket: ${getPackageText(package)}
+Paket: ${getPackageText(packageVal)}
 
 Terima kasih.`;
+
+            const encodedMessage = encodeURIComponent(message);
+
+            
+            const whatsappURL = `https://wa.me/6287865865525?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+
+            form.reset();
+        });
+    }
+
     
-    // Encode pesan untuk URL
-    const encodedMessage = encodeURIComponent(message);
-    
-    // Membuka WhatsApp dengan pesan yang sudah diformat
-    const whatsappURL = `https://wa.me/6281397606622?text=${encodedMessage}`;
-    
-    // Membuka jendela baru untuk WhatsApp
-    window.open(whatsappURL, '_blank');
-    
-    // Reset formulir setelah pengiriman
-    this.reset();
+    const waBtn = document.getElementById("waBtn");
+    if (waBtn) {
+        waBtn.addEventListener("click", function () {
+            window.open("https://wa.me/6287865865525", "_blank");
+        });
+    }
+
 });
 
-// Fungsi untuk memformat tanggal
+function getValue(id) {
+    const el = document.getElementById(id);
+    return el ? el.value : "";
+}
+
 function formatDate(dateString) {
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     const date = new Date(dateString);
     return date.toLocaleDateString('id-ID', options);
 }
 
-// Fungsi untuk mendapatkan teks lokasi
-function getLocationText(locationValue) {
-    const locations = {
+function getLocationText(val) {
+    const items = {
         'hotel': 'Hotel',
         'airport': 'Bandara',
         'other': 'Lokasi Lainnya'
     };
-    return locations[locationValue] || locationValue;
+    return items[val] || val;
 }
 
-// Fungsi untuk mendapatkan teks paket
-function getPackageText(packageValue) {
-    const packages = {
+function getPackageText(val) {
+    const items = {
         'city-tour': 'City Tour Medan',
         'lake-toba': 'Danau Toba',
         'bukit-lawang': 'Bukit Lawang',
         'berastagi': 'Berastagi',
         'custom': 'Paket Kustom'
     };
-    return packages[packageValue] || packageValue;
+    return items[val] || val;
 }
-
-// Menambahkan tanggal minimum untuk input tanggal (hari ini)
-document.addEventListener('DOMContentLoaded', function() {
-    const today = new Date();
-    const formattedDate = today.toISOString().split('T')[0];
-    document.getElementById('travelDate').setAttribute('min', formattedDate);
-});

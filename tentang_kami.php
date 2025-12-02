@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami | Explore Bandung</title>
+    <title>Tentang Kami - Explore Bandung</title>
     <link rel="stylesheet" href="style_tentang.css?v=<?= filemtime(__DIR__ . '/style_tentang.css') ?>">
 </head>
 <?php include 'navbar.php'; ?>
@@ -44,9 +44,7 @@
             </div>
         </div>
     </main>
-    
-    <script src="tentang.js"></script>
-</body>
+
 <?php include 'ulasan.php'; ?>
 <footer class="footer">
     <div class="footer-container">
@@ -110,4 +108,7 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+    <script src="tentang.js"></script>
+</body>
+
 </html>

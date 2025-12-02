@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="galeri.css?v=<?= filemtime(__DIR__ . '/galeri.css') ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <?php include 'navbar.php'; ?>
 <body>
@@ -14,40 +15,39 @@
         <p class="subtitle">Momen Indah Pelanggan di Tempat Wisata Bandung</p>
 
         <div class="galeri">
-            <img src="1.jpeg" onclick="openLightbox(this.src)">
-            <img src="2.jpeg" onclick="openLightbox(this.src)">
-            <img src="3.jpg" onclick="openLightbox(this.src)">
-            <img src="4.jpeg" onclick="openLightbox(this.src)">
-            <img src="5.jpg" onclick="openLightbox(this.src)">
-            <img src="6.jpeg" onclick="openLightbox(this.src)">
-            <img src="7.webp" onclick="openLightbox(this.src)">
-            <img src="8.avif" onclick="openLightbox(this.src)">
-            <img src="9.webp" onclick="openLightbox(this.src)">
-            <img src="10.webp" onclick="openLightbox(this.src)">
-            <img src="11.webp" onclick="openLightbox(this.src)">
-            <img src="12.webp" onclick="openLightbox(this.src)">
-            <img src="13.jpg" onclick="openLightbox(this.src)">
-            <img src="14.webp" onclick="openLightbox(this.src)">
-            <img src="15.jpeg" onclick="openLightbox(this.src)">
-            <img src="16.webp" onclick="openLightbox(this.src)">
-            <img src="17.jpg" onclick="openLightbox(this.src)">
-            <img src="18.jpg" onclick="openLightbox(this.src)">
-            <img src="19.webp" onclick="openLightbox(this.src)">
-            <img src="20.jpeg" onclick="openLightbox(this.src)">
-            <img src="21.webp" onclick="openLightbox(this.src)">
-            <img src="22.webp" onclick="openLightbox(this.src)">
-            <img src="23.jpg" onclick="openLightbox(this.src)">
-            <img src="24.jpg" onclick="openLightbox(this.src)">
-            <img src="25.webp" onclick="openLightbox(this.src)">
-            <img src="26.png" onclick="openLightbox(this.src)">
-            <img src="27.jpeg" onclick="openLightbox(this.src)">
-            <img src="28.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/1.jpeg" onclick="openLightbox(this.src)">
+            <img src="foto/2.jpeg" onclick="openLightbox(this.src)">
+            <img src="foto/3.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/4.jpeg" onclick="openLightbox(this.src)">
+            <img src="foto/5.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/6.jpeg" onclick="openLightbox(this.src)">
+            <img src="foto/7.webp" onclick="openLightbox(this.src)">
+            <img src="foto/8.avif" onclick="openLightbox(this.src)">
+            <img src="foto/9.webp" onclick="openLightbox(this.src)">
+            <img src="foto/10.webp" onclick="openLightbox(this.src)">
+            <img src="foto/11.webp" onclick="openLightbox(this.src)">
+            <img src="foto/12.webp" onclick="openLightbox(this.src)">
+            <img src="foto/13.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/14.webp" onclick="openLightbox(this.src)">
+            <img src="foto/15.jpeg" onclick="openLightbox(this.src)">
+            <img src="foto/16.webp" onclick="openLightbox(this.src)">
+            <img src="foto/17.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/18.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/19.webp" onclick="openLightbox(this.src)">
+            <img src="foto/20.jpeg" onclick="openLightbox(this.src)">
+            <img src="foto/21.webp" onclick="openLightbox(this.src)">
+            <img src="foto/22.webp" onclick="openLightbox(this.src)">
+            <img src="foto/23.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/24.jpg" onclick="openLightbox(this.src)">
+            <img src="foto/25.webp" onclick="openLightbox(this.src)">
+            <img src="foto/26.png" onclick="openLightbox(this.src)">
+            <img src="foto/27.jpeg" onclick="openLightbox(this.src)">
+            <img src="foto/28.jpg" onclick="openLightbox(this.src)">
            
         </div>
     </div>
-</body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<footer class="footer">
+
+    <footer class="footer">
     <div class="footer-container">
 
         <div class="footer-col">
@@ -109,4 +109,5 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+</body>
 </html>

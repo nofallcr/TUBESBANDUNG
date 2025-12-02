@@ -5,10 +5,15 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* HERO */
+
 .hero {
+<<<<<<< HEAD
     height: 100vh; /* full layar */
     background: url("bandung.jpg");
+=======
+    height: 100vh; 
+    background: url("foto/alam_bandung.jpg");
+>>>>>>> 60a949d5d948600224e590d016f53e05849de95f
     background-size: cover;
     background-position: center;
     position: relative;
@@ -61,17 +66,17 @@
 
 @media (max-width: 768px) {
     .hero-text {
-        bottom: 10%; /* Naikkan sedikit posisi teks */
+        bottom: 10%; 
         left: 5%;
-        width: 65%; /* Teks mengambil lebih banyak lebar layar */
+        width: 65%; 
     }
 
     .hero-text h2 {
-        font-size: 44px; /* Kecilkan judul */
+        font-size: 44px; 
     }
 
     .hero-text p {
-        font-size: 18px; /* Kecilkan paragraf */
+        font-size: 18px; 
     }
 
     .btn-wa {
@@ -80,24 +85,24 @@
     }
 }
 
-/* Ponsel (Max 600px) */
+
 @media (max-width: 600px) {
     .hero {
-        /* Posisikan gambar background lebih ke atas agar subjek utama terlihat */
+        
         background-position: 35% center; 
     }
     
     .hero-text {
-        bottom: 5%; /* Tempatkan teks di bagian paling bawah */
+        bottom: 5%;
         left: 0;
         right: 0;
-        width: 90%; /* Ambil hampir seluruh lebar layar */
-        margin: 0 auto; /* Tengah-kan blok teks */
-        text-align: center; /* Tengah-kan teks */
+        width: 90%; 
+        margin: 0 auto; 
+        text-align: center; 
     }
     
     .hero-text h2 {
-        font-size: 32px; /* Lebih kecil lagi untuk ponsel */
+        font-size: 32px; 
         margin-bottom: 10px;
     }
 
@@ -106,7 +111,7 @@
     }
     
     .btn-wa {
-        display: block; /* Buat tombol memenuhi lebar */
+        display: block; 
         width: 100%;
         max-width: 300px;
         margin: 20px auto 0;
