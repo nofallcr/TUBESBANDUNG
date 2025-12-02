@@ -47,6 +47,7 @@
     
     <script src="tentang.js"></script>
 </body>
+<?php include 'ulasan.php'; ?>
 <footer class="footer">
     <div class="footer-container">
 
