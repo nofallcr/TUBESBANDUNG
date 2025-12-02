@@ -6,6 +6,7 @@
     <title>Pemesanan Paket Wisata</title>
     <link rel="stylesheet" href="paket.css?v=<?= filemtime(__DIR__ . '/paket.css') ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -166,10 +167,8 @@
     </div>
 </div>
 
-<script src="paket.js"></script>
-</body>
 <?php include 'ulasan.php'; ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <footer class="footer">
     <div class="footer-container">
 
@@ -232,4 +231,6 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+<script src="paket.js"></script>
+</body>
 </html>

@@ -219,9 +219,7 @@
         </section>
 
     </main>
-<script src="Destinasi.js"></script>
 
-</body>
 <footer class="footer">
     <div class="footer-container">
 
@@ -284,4 +282,6 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+<script src="Destinasi.js"></script>
+</body>
 </html>

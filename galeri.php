@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="galeri.css?v=<?= filemtime(__DIR__ . '/galeri.css') ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <?php include 'navbar.php'; ?>
 <body>
@@ -45,9 +46,8 @@
            
         </div>
     </div>
-</body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<footer class="footer">
+
+    <footer class="footer">
     <div class="footer-container">
 
         <div class="footer-col">
@@ -109,4 +109,5 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+</body>
 </html>

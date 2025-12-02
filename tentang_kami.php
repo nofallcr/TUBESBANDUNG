@@ -44,9 +44,7 @@
             </div>
         </div>
     </main>
-    
-    <script src="tentang.js"></script>
-</body>
+
 <?php include 'ulasan.php'; ?>
 <footer class="footer">
     <div class="footer-container">
@@ -110,4 +108,7 @@
         <p>Wisata Tenang & Nyaman – Your Trusted Explorer Companion</p>
     </div>
 </footer>
+    <script src="tentang.js"></script>
+</body>
+
 </html>
