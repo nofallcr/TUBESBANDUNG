@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungi Kami - ExploreBandung</title>
+    <title>Hubungi Kami - Explore Bandung</title>
     <link rel="stylesheet" href="hubungi.css?v=<?= filemtime(__DIR__ . '/hubungi.css') ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -57,7 +57,7 @@
 
             <div class="footer-brand">
                 <div class="brand-icon">
-                    <img src="LogoExploreBandung.jpeg" alt="Logo">
+                    <img src="foto/LogoExploreBandung.jpeg" alt="Logo">
                 </div>
                 <h2>Explore Bandung</h2>
                 <p class="brand-sub">Destinasi</p>

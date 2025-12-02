@@ -140,7 +140,7 @@
 <header class="navbar">
     <div class="logo">
         <div class="logo-circle">
-            <img src="LogoExploreBandung.jpeg" alt="Bandung Logo">
+            <img src="foto/LogoExploreBandung.jpeg" alt="Bandung Logo">
         </div>
         <div class="logo-text">
             <span>Explore Bandung</span>
