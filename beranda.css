@@ -8,7 +8,7 @@
 /* HERO */
 .hero {
     height: 100vh; /* full layar */
-    background: url("alam_bandung.jfif");
+    background: url("bandung.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
