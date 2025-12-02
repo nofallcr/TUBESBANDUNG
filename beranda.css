@@ -7,13 +7,8 @@
 
 
 .hero {
-<<<<<<< HEAD
-    height: 100vh; /* full layar */
-    background: url("bandung.jpg");
-=======
     height: 100vh; 
     background: url("foto/alam_bandung.jpg");
->>>>>>> 60a949d5d948600224e590d016f53e05849de95f
     background-size: cover;
     background-position: center;
     position: relative;
