@@ -93,7 +93,7 @@
         </div>
 
         <div class="wa-button" id="waBtn">
-            <img src="wa.png" alt="WhatsApp">
+            <img src="foto/wa.png" alt="WhatsApp">
         </div>
     </footer>
 
