@@ -161,6 +161,11 @@
 
 
     <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
 </header>
 
 <script>
