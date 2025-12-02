@@ -14,4 +14,15 @@ document.getElementById('signupBtn').addEventListener('click', function() {
     document.querySelector('.submit-btn').textContent = 'Login';
   });
   
-  
+document.querySelector('.toggle-pass').addEventListener('click', function () {
+
+  const passwordInput = this.previousElementSibling; 
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";   
+    this.textContent = "🙈";       
+  } else {
+    passwordInput.type = "password"; 
+    this.textContent = "👁️";        
+  }
+});
