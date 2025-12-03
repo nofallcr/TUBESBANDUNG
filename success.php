@@ -36,7 +36,7 @@ if (isset($_GET['id'])) {
     $nama   = $_POST['nama'] ?? '';
     $total  = $_POST['total'] ?? 0;
     $metode = $_POST['metode'] ?? '';
->>>>>>> 04ca5d643a8b22ff90590bb3bc7a72b7f18a11b4
+
 }
 ?>
 
@@ -62,7 +62,7 @@ if (isset($_GET['id'])) {
         <p><b>Metode Bayar:</b> <span style="font-weight: bold;"><?= htmlspecialchars($metode) ?></span></p>
     </div>
 
-<<<<<<< HEAD
+
     <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px; margin-top: 15px;">
         <p style="font-size: 1.2em; margin: 0;"><b>Total Bayar:</b> <span style="color: green; font-weight: bold;"><?= rp($total) ?></span></p>
     </div>
@@ -72,7 +72,7 @@ if (isset($_GET['id'])) {
     <a href="beranda.php" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; margin-top: 20px;">
         Kembali ke Beranda
     </a>
-=======
+
 <p><b>Nama:</b> <?= $nama ?></p>
 <p><b>Total Bayar:</b> Rp <?= number_format($total, 0, ",", ".") ?></p>
 <p><b>Metode Pembayaran:</b> <?= ucfirst($metode) ?></p>
@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
 <p>Pembayaran dilakukan setelah kegiatan wisata selesai.</p>
 
 <a href="pesanan.php" class="back">Lihat Pesanan</a>
->>>>>>> 04ca5d643a8b22ff90590bb3bc7a72b7f18a11b4
+
 </div>
 
 </body>
