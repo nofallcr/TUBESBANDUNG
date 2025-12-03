@@ -1,359 +1,156 @@
 <?php
-$namaPaket = isset($_GET['paket']) ? $_GET['paket'] : 'Explore Bandung';
-$hargaOrang = isset($_GET['harga']) ? intval($_GET['harga']) : 75000;
-$lokasi = isset($_GET['lokasi']) ? $_GET['lokasi'] : 'Braga, Lembang, Asia Afrika';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $conn = mysqli_connect("localhost", "root", "", "db_wisata");
+    if (!$conn) die("Koneksi gagal: " . mysqli_connect_error());
+
+    $nama    = $_POST['nama_pemesan'];
+    $email   = $_POST['email_pemesan'];
+    $telepon = $_POST['telepon_pemesan'];
+    $jumlah  = $_POST['jumlah_tiket'];
+    $paket   = $_POST['paket_wisata'];
+    $lokasi  = $_POST['lokasi_wisata'];
+    $total   = $_POST['total_bayar'];
+    $metode  = $_POST['metode_pembayaran'];
+
+    $sql = "INSERT INTO pembayaran 
+            (nama_pemesan, email_pemesan, telepon_pemesan, jumlah_tiket, paket_wisata, lokasi_wisata, total_bayar, metode_pembayaran)
+            VALUES 
+            ('$nama','$email','$telepon','$jumlah','$paket','$lokasi','$total','$metode')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "<script>alert('Pemesanan berhasil!');</script>";
+    } else {
+        echo "<script>alert('Terjadi kesalahan: ". mysqli_error($conn) ."');</script>";
+    }
+    mysqli_close($conn);
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout Paket Wisata</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Form Pemesanan Wisata</title>
+<style>
 
-  <style>
-   /* Reset & Font */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-}
+* { 
+  margin:0;
+  padding:0; 
+  box-sizing:border-box; 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-body {
-  background: #f3f4f6;
-  color: #1f2937;
-}
+body { 
+  background-color:#1a233b; 
+  color:#b9d0fb; 
+  padding:20px; }
 
-/* Container */
-.container {
-  max-width: 960px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
+.container { 
+  max-width:600px; 
+  margin:30px auto; 
+  background-color:#252f4a; 
+  padding:30px; 
+  border-radius:15px; 
+  box-shadow:0 0 15px rgba(0,0,0,0.5); }
 
-/* Header */
-.header {
-  padding: 24px 32px;
-  border-bottom: 1px solid #e5e7eb;
-}
-.header h1 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #111827;
-}
-.header p {
-  margin-top: 4px;
-  font-size: 14px;
-  color: #6b7280;
-}
+h2 { 
+  text-align:center; 
+  margin-bottom:20px; 
+  color:#76c7ff; }
 
-/* Layout */
-.content {
-  display: flex;
-  flex-wrap: wrap;
-}
-.left {
-  flex: 1 1 60%;
-  padding: 32px;
-  border-right: 1px solid #e5e7eb;
-}
-.right {
-  flex: 1 1 40%;
-  padding: 32px;
-}
+label { 
+  display:block; 
+  margin-bottom:5px; 
+  color:#cce0ff; }
 
-/* Sections */
-.section {
-  margin-bottom: 32px;
-}
-.section h2 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 16px;
-  color: #111827;
-}
+input, select, button { 
+  width:100%; 
+  padding:10px; 
+  margin-bottom:15px; 
+  border-radius:8px; 
+  border:none; 
+  font-size:16px; }
 
-/* Forms */
-label {
-  display: block;
-  font-size: 14px;
-  color: #374151;
-  margin-bottom: 6px;
-}
-input, select {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 14px;
-  margin-bottom: 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 4px;
-  background: #f9fafb;
-}
-input:focus, select:focus {
-  border-color: #3b82f6;
-  outline: none;
-  background: #fff;
-}
+input, select { 
+  background-color:#1a233b; 
+  color:#b9d0fb; 
+  border:1px solid #3a4563; }
 
-/* Passenger Card */
-.passenger {
-  margin-bottom: 24px;
-  padding: 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  background: #fafafa;
-}
-.passenger h3 {
-  margin-bottom: 12px;
-  font-size: 16px;
-  color: #3b82f6;
-}
+input:focus, select:focus { 
+  outline:none; 
+  border:1px solid #76c7ff; }
 
-/* Summary */
-.summary {
-  padding: 24px 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  background: #fafafa;
-}
-.summary .item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  font-size: 14px;
-}
-.summary .item:last-child {
-  margin-bottom: 0;
-}
-.summary .item .value {
-  font-weight: 500;
-}
+button { 
+  background-color:#76c7ff; 
+  color:#1a233b; 
+  font-weight:bold; 
+  cursor:pointer; 
+  transition:0.3s; }
 
-/* Button */
-.btn-pay {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  background: #3b82f6;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.btn-pay:hover {
-  background: #2563eb;
-}
+button:hover { 
+  background-color:#5aa0e0; }
 
-
-.summary {
-  background: #ffffff;
-  padding: 24px 20px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.summary h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #111827;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 12px;
-}
-
-.summary .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  background: #f9fafb;
-  font-size: 15px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.summary .item:last-child {
-  margin-bottom: 0;
-}
-
-.summary .item:hover {
-  background: #eef2ff;
-}
-
-.summary .item .label {
-  color: #6b7280;
-}
-
-.summary .item .value {
-  color: #111827;
-  font-weight: 600;
-}
-
-.total {
-  font-size: 18px;
-  font-weight: 700;
-  margin-top: 20px;
-  text-align: right;
-  color: #1e40af;
-}
-
-
-
-
-    @media (max-width: 768px) {
-      .content { flex-direction: column; }
-      .left { border-right: none; }
-    }
-  </style>
+option { 
+  background-color:#1a233b; 
+  color:#b9d0fb; }
+  
+</style>
 </head>
 <body>
 
-<?php include 'navbar.php'; ?>
-
 <div class="container">
+<h2>Form Pemesanan Paket Wisata</h2>
 
-  <div class="header">
-    <h1>Beli Paket Wisata</h1>
-    <p>Pastikan data Anda benar sebelum menyelesaikan pemesanan</p>
-  </div>
+<form action="" method="POST">
 
-  <div class="content">
+    <label>Nama Pemesan:</label>
+    <input type="text" name="nama_pemesan" required>
 
-    <!-- Form Pemesan & Penumpang -->
-    <div class="left">
-      <div class="section">
-        <h2>Data Pemesan</h2>
-        <label>Nama Pemesan</label>
-        <input type="text" id="namaPemesan" placeholder="Nama lengkap">
+    <label>Email:</label>
+    <input type="email" name="email_pemesan">
 
-        <label>Email</label>
-        <input type="email" id="emailPemesan" placeholder="email@domain.com">
+    <label>No Telepon:</label>
+    <input type="text" name="telepon_pemesan">
 
-        <label>No Telepon</label>
-        <input type="tel" id="teleponPemesan" placeholder="08xxxxxxxx">
-      </div>
+    <label>Jumlah Tiket:</label>
+    <input type="number" name="jumlah_tiket" value="1" min="1">
 
-      <div class="section">
-        <h2>Data Penumpang</h2>
+    <label>Pilih Paket Wisata:</label>
+    <select id="pilihPaket" onchange="updatePaket()">
+        <option value="">-- Pilih Paket --</option>
+        <option value="1" data-nama="Braga - Kenangan Lama" data-paket="Paket Harian" data-harga="105000">Braga - Kenangan Lama - Rp105.000</option>
+        <option value="2" data-nama="Asia Africa - Keliling Dunia" data-paket="Paket Harian" data-harga="150000">Asia Africa - Keliling Dunia - Rp150.000</option>
+        <option value="3" data-nama="Dusun Bambu - Damai Alam" data-paket="Paket Keluarga" data-harga="1900000">Dusun Bambu - Damai Alam - RpRp 1.900.000</option>
+        <option value="4" data-nama="Trip Alam" data-lokasi="Paket Trip" data-paket="300000">Trip Alam - Rp300.000</option>
+        <option value="5" data-nama="Trip Sejarah" data-lokasi="Paket Trip" data-paket="150000">Trip Sejarah - Rp150.000</option>
+        <option value="6" data-nama="Kampung Cai Ranca Upas" data-lokasi="Paket Keluarga" data-paket="2200000">Kampung Cai Ranca Upas - Rp2.200.000</option>
+      </select>
 
-        <label>Jumlah Orang</label>
-        <input type="number" id="jumlahOrang" value="1" min="1" max="10">
+    <input type="hidden" name="paket_wisata" id="paket_wisata">
+    <input type="hidden" name="lokasi_wisata" id="lokasi_wisata">
+    <input type="hidden" name="total_bayar" id="total_bayar">
 
-        <div id="formPenumpang"></div>
-      </div>
-    </div>
+    <label>Metode Pembayaran:</label>
+    <select name="metode_pembayaran" required>
+        <option value="transfer">Transfer Bank</option>
+        <option value="ewallet">E-Wallet</option>
+    </select>
 
-<div class="right">
-  <div class="summary">
-    <h2>Ringkasan Pemesanan</h2>
-
-    <div class="item">
-      <div class="label">Paket</div>
-      <div class="value" id="paketName"><?php echo $namaPaket; ?></div>
-    </div>
-
-    <div class="item">
-      <div class="label">Lokasi</div>
-      <div class="value" id="lokasiPaket"><?php echo $lokasi; ?></div>
-    </div>
-
-    <div class="item">
-      <div class="label">Harga / Orang</div>
-      <div class="value" id="hargaOrang">Rp <?php echo number_format($hargaOrang,0,",","."); ?></div>
-    </div>
-
-    <div class="item total">
-      Total: <span id="totalHarga">Rp <?php echo number_format($hargaOrang,0,",","."); ?></span>
-    </div>
-
-     <form action="payment.php" method="POST" id="checkoutForm">
-        <input type="hidden" name="nama_pemesan" id="sendNama">
-        <input type="hidden" name="email_pemesan" id="sendEmail">
-        <input type="hidden" name="telepon_pemesan" id="sendTelp">
-        <input type="hidden" name="jumlah" id="sendJumlah">
-        <input type="hidden" name="total" id="sendTotal">
-        <input type="hidden" name="paket" value="<?php echo $namaPaket; ?>">
-        <input type="hidden" name="lokasi" value="<?php echo $lokasi; ?>">
-
-        <button type="button" class="btn-pay" onclick="kirimKePembayaran()">
-          Lanjutkan ke Pembayaran
-        </button>
-     </form>
-
-  </div>
+    <button type="submit">Pesan Sekarang</button>
+</form>
 </div>
 
 <script>
-  const jumlahOrangInput = document.getElementById('jumlahOrang');
-  const formPenumpang = document.getElementById('formPenumpang');
-  const totalHargaEl = document.getElementById('totalHarga');
-  const hargaPerOrang = <?php echo $hargaOrang; ?>;
+function updatePaket() {
+    const pilihan = document.getElementById("pilihPaket");
+    const paket = pilihan.options[pilihan.selectedIndex];
 
-  function updatePenumpangForm(jumlah) {
-    formPenumpang.innerHTML = '';
-    for (let i = 1; i <= jumlah; i++) {
-      formPenumpang.innerHTML += `
-        <div class="passenger">
-          <h3>Penumpang ${i}</h3>
-          <label>Nama Lengkap</label>
-          <input type="text" name="nama_penumpang_${i}" placeholder="Nama lengkap">
+    document.getElementById("paket_wisata").value = paket.getAttribute("data-nama");
+    document.getElementById("lokasi_wisata").value = paket.getAttribute("data-lokasi");
 
-          <label>Umur</label>
-          <input type="number" name="umur_penumpang_${i}" placeholder="Umur">
-
-          <label>Jenis Kelamin</label>
-          <select name="jk_penumpang_${i}">
-            <option value="Laki-laki">Laki-laki</option>
-            <option value="Perempuan">Perempuan</option>
-          </select>
-        </div>
-      `;
-    }
-
-    const total = hargaPerOrang * jumlah;
-    totalHargaEl.innerText = `Rp ${total.toLocaleString('id-ID')}`;
-  }
-
-  jumlahOrangInput.addEventListener('input', () => {
-    const val = parseInt(jumlahOrangInput.value) || 1;
-    updatePenumpangForm(val);
-  });
-
-  updatePenumpangForm(1);
-
-  function kirimKePembayaran() {
-    const nama = document.getElementById("namaPemesan").value;
-    const email = document.getElementById("emailPemesan").value;
-    const telp = document.getElementById("teleponPemesan").value;
-    const jumlah = document.getElementById("jumlahOrang").value;
-
-    if(nama === "" || email === "" || telp === ""){
-      alert("Lengkapi dulu data pemesan");
-      return;
-    }
-
-    const total = hargaPerOrang * parseInt(jumlah);
-
-    document.getElementById("sendNama").value   = nama;
-    document.getElementById("sendEmail").value  = email;
-    document.getElementById("sendTelp").value   = telp;
-    document.getElementById("sendJumlah").value = jumlah;
-    document.getElementById("sendTotal").value  = total;
-
-    // Submit form
-    document.getElementById("checkoutForm").submit();
-  }
+    const harga = paket.getAttribute("data-harga");
+    const jumlah = document.querySelector('input[name="jumlah_tiket"]').value;
+    document.getElementById("total_bayar").value = harga * jumlah;
+}
 </script>
 
 </body>
