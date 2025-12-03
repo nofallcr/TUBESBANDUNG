@@ -19,7 +19,7 @@
             
             <div class="about-image">
                 
-                <img src="" 
+                <img src="foto/TIM.jpeg" 
                      alt="Tim Explore Bandung">
             </div>
             
