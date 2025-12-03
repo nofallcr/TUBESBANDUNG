@@ -24,10 +24,10 @@ function rp($angka) {
 // --- 2. Inisialisasi Variabel Default ---
 $nama = 'Pengunjung';
 $email = 'N/A';
-$telp = 'N/A';
+$telepon = 'N/A';
 $jumlah = 1;
 $total = 0;
-$paket = 'N/A';
+$paket_wisata = 'N/A';
 $lokasi = 'N/A';
 $metode = 'Tidak diketahui';
 $id_pesanan = null; 
@@ -44,10 +44,10 @@ if (isset($_GET['id'])) {
         
         $nama   = $data['nama_pemesan'];
         $email  = $data['email_pemesan'] ?? 'N/A'; 
-        $telp   = $data['telp_pemesan'] ?? 'N/A';
+        $telepon= $data['telepon_pemesan'] ?? 'N/A';
         $jumlah = $data['jumlah_tiket'] ?? 1;
         $total  = $data['total_bayar'];
-        $paket  = $data['nama_paket'] ?? 'N/A';
+        $paket_wisata  = $data['paket_wisata'] ?? 'N/A';
         $lokasi = $data['lokasi_wisata'] ?? 'N/A';
         $metode = $data['metode_pembayaran'];
     } else {
@@ -60,21 +60,21 @@ if (isset($_GET['id'])) {
     
     $nama_post = mysqli_real_escape_string($conn, $_POST['nama'] ?? 'Pengunjung');
     $email_post = mysqli_real_escape_string($conn, $_POST['email'] ?? 'N/A');
-    $telp_post = mysqli_real_escape_string($conn, $_POST['telp'] ?? 'N/A');
+    $telepon_post = mysqli_real_escape_string($conn, $_POST['telepon'] ?? 'N/A');
     $jumlah_post = (int)($_POST['jumlah'] ?? 1);
     $total_post = (float)($_POST['total'] ?? 0);
-    $paket_post = mysqli_real_escape_string($conn, $_POST['paket'] ?? 'N/A');
+    $paket_wisata_post = mysqli_real_escape_string($conn, $_POST['paket_wisata'] ?? 'N/A');
     $lokasi_post = mysqli_real_escape_string($conn, $_POST['lokasi'] ?? 'N/A');
     $metode_post = mysqli_real_escape_string($conn, $_POST['metode'] ?? 'Tidak diketahui');
     
     
     $insert_query = "INSERT INTO pembayaran (
-        nama_pemesan, email_pemesan, telp_pemesan, 
+        nama_pemesan, email_pemesan, telepon_pemesan, 
         jumlah_tiket, total_bayar, nama_paket, 
         lokasi_wisata, metode_pembayaran, tanggal_pesan
     ) VALUES (
-        '$nama_post', '$email_post', '$telp_post', 
-        $jumlah_post, $total_post, '$paket_post', 
+        '$nama_post', '$email_post', '$telepon_post', 
+        $jumlah_post, $total_post, '$paket_wisata_post', 
         '$lokasi_post', '$metode_post', NOW()
     )";
     
@@ -85,10 +85,10 @@ if (isset($_GET['id'])) {
         
         $nama = $nama_post;
         $email = $email_post;
-        $telp = $telp_post;
+        $telepon = $telepon_post;
         $jumlah = $jumlah_post;
         $total = $total_post;
-        $paket = $paket_post;
+        $paket_wisata = $paket_wisata_post;
         $lokasi = $lokasi_post;
         $metode = $metode_post;
         
@@ -127,11 +127,11 @@ mysqli_close($conn);
     
     <div style="text-align: left; padding: 15px; border-top: 2px solid #007bff; border-bottom: 1px solid #eee;">
         <h3 style="color: #007bff;">Detail Pesanan Anda</h3>
-        <p><b>Paket Wisata:</b> <?= htmlspecialchars($paket) ?></p>
+        <p><b>Paket Wisata:</b> <?= htmlspecialchars($paket_wisata) ?></p>
         <p><b>Lokasi Tujuan:</b> <?= htmlspecialchars($lokasi) ?></p>
         <p><b>Jumlah Tiket:</b> <?= $jumlah ?></p>
         <p><b>Email Kontak:</b> <?= htmlspecialchars($email) ?></p>
-        <p><b>Telepon Kontak:</b> <?= htmlspecialchars($telp) ?></p>
+        <p><b>Telepon Kontak:</b> <?= htmlspecialchars($telepon) ?></p>
         <p><b>Metode Bayar:</b> <span style="font-weight: bold;"><?= htmlspecialchars($metode) ?></span></p>
     </div>
 
