@@ -1,12 +1,11 @@
 <?php
-// order.php (styled + fixed total calculation)
-// DB config
+
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
 $db_name = "db_wisata";
 
-// Daftar paket (server-side authoritative). Sesuaikan bila mau ambil dari DB.
+
 $paket_list = [
     "1" => ["nama" => "Braga - Kenangan Lama", "lokasi" => "Kota Bandung", "harga" => 105000, "tipe" => "Paket Harian"],
     "2" => ["nama" => "Asia Africa - Keliling Dunia", "lokasi" => "Kota Bandung", "harga" => 150000, "tipe" => "Paket Harian"],
@@ -16,31 +15,31 @@ $paket_list = [
     "6" => ["nama" => "Kampung Cai Ranca Upas", "lokasi" => "Ciwidey", "harga" => 2200000, "tipe" => "Paket Keluarga"]
 ];
 
-// Proses form submit
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
     if (!$conn) die("Koneksi gagal: " . mysqli_connect_error());
 
-    // Ambil & sanitize input
+    
     $nama    = mysqli_real_escape_string($conn, $_POST['nama_pemesan'] ?? '');
     $email   = mysqli_real_escape_string($conn, $_POST['email_pemesan'] ?? '');
     $telepon = mysqli_real_escape_string($conn, $_POST['telepon_pemesan'] ?? '');
     $jumlah  = max(1, (int)($_POST['jumlah_tiket'] ?? 1));
     $paket_id = $_POST['paket_id'] ?? '';
 
-    // validasi paket
+    
     if (!isset($paket_list[$paket_id])) {
         mysqli_close($conn);
         die("Paket tidak valid.");
     }
 
-    // server-side authoritative paket data
+    
     $paket_info = $paket_list[$paket_id];
     $paket_nama = mysqli_real_escape_string($conn, $paket_info['nama']);
     $paket_lokasi = mysqli_real_escape_string($conn, $paket_info['lokasi']);
     $harga_satuan = (int)$paket_info['harga'];
 
-    // Hitung total di server (penting!)
+    
     $total = $harga_satuan * $jumlah;
 
     $metode  = mysqli_real_escape_string($conn, $_POST['metode_pembayaran'] ?? '');
@@ -67,10 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <title>Form Pemesanan Wisata</title>
-<<<<<<< HEAD
 
 <link rel="stylesheet" href="order.css?v=<?= filemtime(__DIR__ . '/order.css') ?>">
-=======
 <style>
 * { 
   margin:0;
@@ -174,25 +171,24 @@ option {
         <option value="ewallet">E-Wallet</option>
     </select>
 
-<<<<<<< HEAD
+
  <form action="success.php" method="POST">
-=======
+
     <div>
       <strong style="color:#cce0ff;">Estimasi Total:</strong>
       <div id="display_total" style="margin-top:8px; font-size:18px; font-weight:bold; color:#e6f7ff;">Rp0</div>
     </div>
 
     <br>
->>>>>>> 04ca5d643a8b22ff90590bb3bc7a72b7f18a11b4
+
     <button type="submit">Pesan Sekarang</button>
 </form>
 </form>
 </div>
-<<<<<<< HEAD
-=======
+
 
 <script>
-// Helper untuk format rupiah
+
 function formatRupiah(n) {
     return 'Rp' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
@@ -224,11 +220,11 @@ function recalc() {
     displayTotal.textContent = formatRupiah(total);
 }
 
-// Event listeners
+
 pilihPaket.addEventListener('change', recalc);
 jumlahInput.addEventListener('input', recalc);
 
-// safety: recalc saat submit
+
 document.getElementById('formOrder').addEventListener('submit', function(e){
     recalc();
 });

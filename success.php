@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -16,7 +15,6 @@ $metode = $_POST['metode'] ?? 'Tidak diketahui';
 
 function rp($angka) {
     return 'Rp ' . number_format($angka, 0, ',', '.');
-=======
 if (isset($_GET['id'])) {
     $conn = mysqli_connect("localhost", "root", "", "db_wisata");
     if (!$conn) die("Koneksi gagal");
@@ -37,7 +35,7 @@ if (isset($_GET['id'])) {
     $total  = $_POST['total'] ?? 0;
     $metode = $_POST['metode'] ?? '';
 
-}
+}}
 ?>
 
 <!DOCTYPE html>
