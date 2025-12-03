@@ -3,28 +3,11 @@ $nama   = $_POST['nama'];
 $total  = $_POST['total'];
 $metode = $_POST['metode'];
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Pemesanan Berhasil</title>
-<style>
-body{
-    font-family:Arial;
-    background:#f9fafb;
-}
-.box{
-    max-width:600px;
-    margin:80px auto;
-    background:white;
-    padding:40px;
-    border-radius:8px;
-    text-align:center;
-}
-h2{
-    color:green;
-}
-</style>
+<link rel="stylesheet" href="success.css?v=<?= filemtime(__DIR__ . '/success.css') ?>">
 </head>
 <body>
 
@@ -39,7 +22,7 @@ h2{
 
 <p>Pembayaran dilakukan setelah kegiatan wisata selesai.</p>
 
-<a href="beranda.php">Kembali ke Beranda</a>
+<a href="beranda.php" class="back">Kembali</a>
 </div>
 
 </body>

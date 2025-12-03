@@ -22,67 +22,7 @@ function rp($angka) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bayar Tiket</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-    font-family: Arial, sans-serif; 
-    background: #f5f5f5; 
-    padding: 0px; 
-}
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}   
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-.info {
-    margin-bottom: 20px;
-}
-
-.info-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.total {
-    font-size: 1.2em;
-    text-align: right;
-    margin-bottom: 20px;
-    color: #27ae60;
-}
-.method {
-    margin-bottom: 20px;
-}
-
-.method-option {
-    padding: 10px;
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1em;
-    color: #555;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: #27ae60;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-}
-</style>
+<link rel="stylesheet" href="payment.css?v=<?= filemtime(__DIR__ . '/payment.css') ?>">
 </head>
 <?php include 'navbar.php'; ?>
 <body>
