@@ -1,33 +1,32 @@
 <?php
 $testimoni = [
     [
-<<<<<<< HEAD
         "nama" => "Vasha",
         "lokasi" => "Asia Africa",
         "avatar_color" => "#f4a100",
         "pesan" => "Pengalaman harian yang luar biasa, dan benar-benar sangat menikmatinya",
         "tambahan" => "Vasha & Keluarga"
-    ],
+    ], // DITAMBAH: Koma dan Penutup Array (])
     [
         "nama" => "Yosua",
         "lokasi" => "Braga",
         "avatar_color" => "#ff5a5f",
         "pesan" => "Sangat senang melihat sejarah di kota Bandung",
         "tambahan" => "Yosua ganteng"
-=======
+    ], 
+    [
         "nama" => "Bariq",
         "lokasi" => "Asia Africa",
         "avatar_color" => "#f4a100",
         "pesan" => "Pengalaman harian yang luar biasa, dan benar-benar sangat menikmatinya",
         "tambahan" => "Bariq & Keluarga"
-    ],
+    ], 
     [
         "nama" => "Sarah",
         "lokasi" => "Braga",
         "avatar_color" => "#ff5a5f",
         "pesan" => "Sangat senang melihat sejarah di kota Bandung",
         "tambahan" => "Sarah"
->>>>>>> 989c22eb32fc60df74b3e89344099ebfb690c9cf
     ],
     [
         "nama" => "Farel",
@@ -35,6 +34,6 @@ $testimoni = [
         "avatar_color" => "#2196f3",
         "pesan" => "Terima Kasih!, sangat indah, nyaman, dan benar-benar menikmati udara alam yang sejuk",
         "tambahan" => "Farel & Rakan-rakan"
-    ],
+    ] 
 ];
 ?>

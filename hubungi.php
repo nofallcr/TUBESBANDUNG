@@ -100,8 +100,4 @@
     <script src="hubungi.js"></script>
 
 </body>
-<<<<<<< HEAD
-</html>
-=======
-</html>
->>>>>>> 989c22eb32fc60df74b3e89344099ebfb690c9cf
+
