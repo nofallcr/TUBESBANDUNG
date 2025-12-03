@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
   const authForm = document.getElementById("authForm");
   const submitBtn = document.getElementById("submitBtn");
@@ -110,4 +111,33 @@ document.addEventListener("DOMContentLoaded", function () {
       // --- Akhir Logika Simulasi Registrasi ---
     }
   });
+=======
+document.getElementById('signupBtn').addEventListener('click', function() {
+    this.classList.add('active');
+    document.getElementById('loginBtn').classList.remove('active');
+    document.getElementById('formTitle').textContent = 'Sign Up';
+    document.getElementById('nameField').style.display = 'flex';
+    document.querySelector('.submit-btn').textContent = 'Register';
+  });
+  
+  document.getElementById('loginBtn').addEventListener('click', function() {
+    this.classList.add('active');
+    document.getElementById('signupBtn').classList.remove('active');
+    document.getElementById('formTitle').textContent = 'Login';
+    document.getElementById('nameField').style.display = 'none';
+    document.querySelector('.submit-btn').textContent = 'Login';
+  });
+  
+document.querySelector('.toggle-pass').addEventListener('click', function () {
+
+  const passwordInput = this.previousElementSibling; 
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";   
+    this.textContent = "🙈";       
+  } else {
+    passwordInput.type = "password"; 
+    this.textContent = "👁️";        
+  }
+>>>>>>> 989c22eb32fc60df74b3e89344099ebfb690c9cf
 });

@@ -1,6 +1,7 @@
 <?php
 $testimoni = [
     [
+<<<<<<< HEAD
         "nama" => "Vasha",
         "lokasi" => "Asia Africa",
         "avatar_color" => "#f4a100",
@@ -13,6 +14,20 @@ $testimoni = [
         "avatar_color" => "#ff5a5f",
         "pesan" => "Sangat senang melihat sejarah di kota Bandung",
         "tambahan" => "Yosua ganteng"
+=======
+        "nama" => "Bariq",
+        "lokasi" => "Asia Africa",
+        "avatar_color" => "#f4a100",
+        "pesan" => "Pengalaman harian yang luar biasa, dan benar-benar sangat menikmatinya",
+        "tambahan" => "Bariq & Keluarga"
+    ],
+    [
+        "nama" => "Sarah",
+        "lokasi" => "Braga",
+        "avatar_color" => "#ff5a5f",
+        "pesan" => "Sangat senang melihat sejarah di kota Bandung",
+        "tambahan" => "Sarah"
+>>>>>>> 989c22eb32fc60df74b3e89344099ebfb690c9cf
     ],
     [
         "nama" => "Farel",

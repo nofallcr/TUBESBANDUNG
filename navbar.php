@@ -27,7 +27,11 @@
     <a href="Destinasi.php" >Destinasi</a>
     <a href="tentang_kami.php">Tentang Kami</a>
     <a href="hubungi.php">Kontak Kami</a> 
+<<<<<<< HEAD
     <a href="login.php">Akun</a>
+=======
+    <a href="login_signup.php">Login</a>
+>>>>>>> 989c22eb32fc60df74b3e89344099ebfb690c9cf
 </nav>
 
 
