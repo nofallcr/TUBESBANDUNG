@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header("Location: beranda.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="id">
 <!DOCTYPE html>
 <html lang="id">
 <head>

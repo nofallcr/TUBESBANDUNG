@@ -31,69 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <title>Form Pemesanan Wisata</title>
-<style>
 
-* { 
-  margin:0;
-  padding:0; 
-  box-sizing:border-box; 
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-body { 
-  background-color:#1a233b; 
-  color:#b9d0fb; 
-  padding:20px; }
-
-.container { 
-  max-width:600px; 
-  margin:30px auto; 
-  background-color:#252f4a; 
-  padding:30px; 
-  border-radius:15px; 
-  box-shadow:0 0 15px rgba(0,0,0,0.5); }
-
-h2 { 
-  text-align:center; 
-  margin-bottom:20px; 
-  color:#76c7ff; }
-
-label { 
-  display:block; 
-  margin-bottom:5px; 
-  color:#cce0ff; }
-
-input, select, button { 
-  width:100%; 
-  padding:10px; 
-  margin-bottom:15px; 
-  border-radius:8px; 
-  border:none; 
-  font-size:16px; }
-
-input, select { 
-  background-color:#1a233b; 
-  color:#b9d0fb; 
-  border:1px solid #3a4563; }
-
-input:focus, select:focus { 
-  outline:none; 
-  border:1px solid #76c7ff; }
-
-button { 
-  background-color:#76c7ff; 
-  color:#1a233b; 
-  font-weight:bold; 
-  cursor:pointer; 
-  transition:0.3s; }
-
-button:hover { 
-  background-color:#5aa0e0; }
-
-option { 
-  background-color:#1a233b; 
-  color:#b9d0fb; }
-  
-</style>
+<link rel="stylesheet" href="order.css?v=<?= filemtime(__DIR__ . '/order.css') ?>">
 </head>
 <body>
 
@@ -135,23 +74,10 @@ option {
         <option value="ewallet">E-Wallet</option>
     </select>
 
+ <form action="success.php" method="POST">
     <button type="submit">Pesan Sekarang</button>
 </form>
+</form>
 </div>
-
-<script>
-function updatePaket() {
-    const pilihan = document.getElementById("pilihPaket");
-    const paket = pilihan.options[pilihan.selectedIndex];
-
-    document.getElementById("paket_wisata").value = paket.getAttribute("data-nama");
-    document.getElementById("lokasi_wisata").value = paket.getAttribute("data-lokasi");
-
-    const harga = paket.getAttribute("data-harga");
-    const jumlah = document.querySelector('input[name="jumlah_tiket"]').value;
-    document.getElementById("total_bayar").value = harga * jumlah;
-}
-</script>
-
 </body>
 </html>
