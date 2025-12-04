@@ -1,19 +1,61 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #2b3960;
+
+:root {
+    --primary-color: #007bff; 
+    --primary-dark: #0056b3;
+    --background-color: #2b3960; 
+    --card-bg: #ffffff;
+    --admin-color: #dc2626; 
+    --link-color-register: #28a745; 
+    --admin-button-color: #dc2626; 
+    --admin-button-dark: #b91c1c;
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background: var(--background-color); 
+    transition: background-color 0.3s;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.login-card {
+    background: var(--card-bg);
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+
+#formTitle {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.5rem; 
+    font-weight: 700;
+}
+
 .logo-image {
-    width: 50px;                
+    width: 50px; 
     height: 50px;
-    object-fit: cover;           
-    border-radius: 50%;           
+    object-fit: cover; 
+    border-radius: 50%; 
     display: block;
-    margin: 0 auto 20px auto;     
+    margin: 0 auto 20px auto; 
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -22,24 +64,7 @@ body {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
-.login-container {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-}
 
-.login-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.login-card h2 {
-    margin-bottom: 20px;
-    color: #007bff;
-}
 
 .form-group {
     text-align: left;
@@ -50,6 +75,8 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #333; 
+    font-size: 1em;
 }
 
 .form-group input {
@@ -58,33 +85,86 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-button {
+.form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px; 
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.toggle-icon:hover {
+    color: #555;
+}
+
+
+#submitBtn, #adminSubmitBtn {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: var(--primary-color); 
     color: white;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+#submitBtn:hover, #adminSubmitBtn:hover {
+    background-color: var(--primary-dark);
 }
+
+#submitBtn:disabled, #adminSubmitBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#adminSubmitBtn {
+    background-color: var(--admin-button-color); 
+}
+
+#adminSubmitBtn:hover {
+    background-color: var(--admin-button-dark); 
+}
+
 
 .switch-text {
     margin-top: 15px;
     font-size: 0.9em;
+    color: #555; 
+    text-align: center;
 }
 
 .switch-text a {
-    color: #28a745;
+    color: var(--link-color-register); 
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .switch-text a:hover {
@@ -97,18 +177,127 @@ button:hover {
     color: #555;
     text-decoration: none;
     font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s;
 }
 
-.password-wrapper {
-    position: relative;
+.back-btn:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
-.toggle-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 18px;
-    user-select: none;
+
+#errorMessage {
+    padding: 10px;
+    background-color: #fee2e2;
+    color: var(--admin-color);
+    border: 1px solid var(--admin-color);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: none; 
+}
+
+
+.admin-login-link {
+    text-align: center;
+    margin-top: 10px; 
+    padding: 5px 0;
+}
+
+.admin-login-link a {
+    color: var(--primary-color); 
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 0.9em; 
+    border: 1px solid transparent;
+}
+
+.admin-login-link a:hover {
+    color: var(--primary-dark); 
+    background-color: #e0e0e0; 
+    border-color: #e0e0e0;
+}
+
+
+
+@media (max-width: 500px) {
+    .login-card {
+        padding: 20px;
+        border-radius: 8px;
+    }
+    #formTitle {
+        font-size: 1.3rem;
+    }
+}
+
+.admin-mode {
+    background-color: #3f51b5; 
+}
+
+.admin-mode .login-card {
+    background: #303f9f; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.admin-mode #formTitle {
+    color: #ff9800; 
+}
+
+.admin-mode .form-group label,
+.admin-mode .switch-text,
+.admin-mode #switchText {
+    color: #c5cae9; 
+}
+
+.admin-mode .form-group input {
+    background-color: #3f51b5; 
+    border-color: #5c6bc0;
+    color: white;
+}
+
+.admin-mode .form-group input:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.4);
+}
+
+.admin-mode .toggle-icon {
+    color: #e8eaf6;
+}
+
+.admin-mode .toggle-icon:hover {
+    color: white;
+}
+
+
+.admin-mode #submitBtn,
+.admin-mode #adminSubmitBtn {
+    background-color: var(--admin-color); 
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+.admin-mode #submitBtn:hover,
+.admin-mode #adminSubmitBtn:hover {
+    background-color: #b91c1c;
+}
+
+.admin-mode .back-btn {
+    color: #e8eaf6;
+}
+
+.admin-mode .back-btn:hover {
+    color: white;
+}
+
+.admin-mode .admin-login-link a {
+    color: #ff9800; 
+}
+.admin-mode .admin-login-link a:hover {
+    color: white; 
+    background-color: #3f51b5; 
 }

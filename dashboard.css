@@ -1,11 +1,11 @@
 
 body {
-    background-color: #213a5c;
+    background-color: #253d5f;
 }
 
 .dashboard-logo {
     width: 150px;
-    height: auto; 
+    height: max-content; 
     margin-bottom: 20px; 
     display: block;
     margin-left: auto;
@@ -21,7 +21,7 @@ body {
     padding: 25px; 
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
+    margin-top: 100px; /* Sesuai permintaan Anda */
     background-color: white;
 }
 
@@ -100,29 +100,32 @@ body {
     margin: 0 auto;
 }
 
-.stat-card {
+
+.summary-card { 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 25px;
     background: linear-gradient(45deg, #00bcd4, #4dd0e1); 
     color: white;
     border: none;
+    border-radius: 10px; 
 }
 
-.stat-card h4 {
+.summary-card h4 {
     margin: 0;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.1em;
     opacity: 0.9;
 }
 
-.stat-value {
+.summary-card p {
     font-size: 2.5em;
     font-weight: 800;
     margin: 10px 0;
     line-height: 1;
+    color: white;
 }
 
 .stat-link {
@@ -140,6 +143,7 @@ body {
 @media screen and (max-width: 768px) {
     .user-widgets {
         grid-template-columns: 1fr; 
+        padding: 0 20px;
     }
 
     .user-card {
@@ -160,11 +164,10 @@ body {
 }
 
 
-
 .riwayat-container {
     margin-top: 30px;
     padding: 20px;
-    background-color: #697f9f;
+    background-color: #697f9f; 
     border-radius: 10px;
 }
 
@@ -222,11 +225,195 @@ body {
 .status-cancelled { background-color: #dc3545; }
 
 .user-card {
-    margin-top: 0; 
+    margin-top: 100px; 
 }
 
 @media screen and (max-width: 600px) {
     .pesanan-list {
         grid-template-columns: 1fr;
     }
+}
+
+.user-widgets {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-table thead th {
+    background-color: #253d5f; 
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.data-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9em;
+    vertical-align: middle;
+    color: #333;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+.data-table .status-pending, .data-table .status-paid, .data-table .status-cancelled {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+.data-table .status-pending { background-color: #ffc107; color: #333; }
+.data-table .status-paid { background-color: #28aa45; }
+.data-table .status-cancelled { background-color: #dc3545; }
+
+
+
+.action-btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.action-btn-group button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8em;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.detail-btn { background-color: #00bcd4; color: white; }
+.detail-btn:hover { background-color: #0097a7; }
+
+.edit-btn { background-color: #ffc107; color: #333; }
+.edit-btn:hover { background-color: #e0a800; }
+
+.delete-btn { background-color: #e74c3c; color: white; }
+.delete-btn:hover { background-color: #c0392b; }
+
+.action-btn-group i {
+    margin-right: 5px;
+}
+
+
+.alert {
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 0.95em;
+    border: 1px solid transparent;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.add-new-link {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.4);
+}
+.add-new-link:hover {
+    background-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .data-table thead th:nth-child(4), 
+    .data-table tbody td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .user-card { margin-top: 100px !important; } 
+    .action-group { flex-direction: column; width: 100%; }
+    .action-group button { width: 100%; }
+    
+    .data-table { border: 0; }
+    .data-table thead { display: none; }
+    .data-table tbody td {
+        display: block;
+        text-align: right !important;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .data-table tbody td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: #495057;
+    }
+    .data-table tbody td:nth-child(2), 
+    .data-table tbody td:nth-child(3), 
+    .data-table tbody td:nth-child(5), 
+    .data-table tbody td:nth-child(6), 
+    .data-table tbody td:nth-child(8)
+    {
+        display: block;
+    }
+    .data-table tbody td:nth-child(4) { display: none; }
+
+    .data-table tbody tr {
+        border: 1px solid #dee2e6;
+        margin-bottom: 10px;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .data-table tbody td:last-child {
+        border-bottom: 0;
+        padding-bottom: 15px;
+    }
+    
+    
+    .data-table tbody td:nth-child(1):before { content: "ID Transaksi:"; }
+    .data-table tbody td:nth-child(2):before { content: "Pemesan:"; }
+    .data-table tbody td:nth-child(3):before { content: "Paket:"; }
+    .data-table tbody td:nth-child(5):before { content: "Lokasi:"; }
+    .data-table tbody td:nth-child(6):before { content: "Total Bayar:"; }
+    .data-table tbody td:nth-child(7):before { content: "Status:"; }
+    .data-table tbody td:nth-child(8):before { content: "Tanggal:"; }
 }

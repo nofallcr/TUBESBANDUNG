@@ -36,17 +36,15 @@
 
                 <p class="switch-text">
                     <span id="switchText">Belum punya akun?</span>
-                    <a href="#" id="switchModeLink" data-mode="login">Daftar</a>
+                    <a id="switchModeLink" data-mode="login">Daftar</a>
                 </p>
             </form>
+            <p class="switch-text">
+            <a href="admin_login.php">Login Admin</a>
+            </p>
             <a href="beranda.php" class="back-btn">← Kembali ke Beranda</a>
         </div>
     </div>
-
-</body>
-    <p class="switch-text" style="margin-top: 10px;">
-    <a href="admin_login.php">Login sebagai Administrator</a>
-</p>
 </body>
 <script>
         document.addEventListener("DOMContentLoaded", function() {
