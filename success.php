@@ -16,12 +16,12 @@ if (!$conn) {
     die("Koneksi Database Gagal: " . mysqli_connect_error());
 }
 
-// Fungsi Pembantu Format Rupiah
+
 function rp($angka) {
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
 
-// --- 2. Inisialisasi Variabel Default ---
+
 $nama = 'Pengunjung';
 $email = 'N/A';
 $telepon = 'N/A';
@@ -150,7 +150,7 @@ mysqli_close($conn);
 
     <p style="color: #6c757d; font-size: 0.9em;">Pembayaran dilakukan setelah kegiatan wisata selesai.</p>
 
-    <a href="pesanan.php" class="back" style="color: #007bff; text-decoration: none;">Lihat Pesanan Saya</a>
+    <a href="pemesanan.php" class="back" style="color: #007bff; text-decoration: none;">Lihat Pesanan Saya</a>
 
 </div>
 
