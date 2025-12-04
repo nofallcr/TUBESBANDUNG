@@ -96,7 +96,7 @@ function rp($angka) {
         <?php else: ?>
             <div style="background: white; padding: 20px; border-radius: 8px; text-align: center;">
                 <p style="color: #333; margin: 0;">Anda belum memiliki riwayat pemesanan.</p>
-                <a href="beranda.php" style="color: #007bff; text-decoration: none; font-weight: bold; margin-top: 10px; display: inline-block;">Pesan Sekarang</a>
+                <a href="paket.php" style="color: #007bff; text-decoration: none; font-weight: bold; margin-top: 10px; display: inline-block;">Pesan Sekarang</a>
             </div>
         <?php endif; ?>
     </div>
