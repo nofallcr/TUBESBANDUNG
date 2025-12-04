@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const switchText = document.getElementById("switchText");
     const passwordInput = document.getElementById("password");
 
-    // switch mode login/register
+    
     switchModeLink.addEventListener("click", function(e){
         e.preventDefault();
         const mode = switchModeLink.getAttribute("data-mode");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(data.includes("Login berhasil")){
                 window.location.href = "dashboard.php";
             } else if(data.includes("Registrasi berhasil")){
-                switchModeLink.click(); // balik ke login
+                switchModeLink.click(); 
             }
         });
     });
