@@ -23,10 +23,13 @@
                     <input type="email" id="email" placeholder="Masukkan Email Anda" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Masukkan Kata Sandi" required>
-                </div>
+           <div class="form-group password-group">
+    <label for="password">Password</label>
+    <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Masukkan Kata Sandi" required>
+        <span id="togglePassword" class="toggle-icon"></span>
+    </div>
+</div>
 
                 <button type="submit" id="submitBtn">Login</button>
 
