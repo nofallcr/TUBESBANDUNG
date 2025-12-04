@@ -109,7 +109,82 @@ mysqli_close($conn);
         
         .status-pending { background-color: #ffc107; } 
         .status-paid { background-color: #28a745; } 
-        .status-cancelled { background-color: #dc3545; } 
+        .status-cancelled { background-color: #dc3545; }
+
+       .pesanan-container {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+       .pesanan-table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+
+       .pesanan-table th, .pesanan-table td {
+       padding: 12px;
+       border-bottom: 1px solid #eee;
+       text-align: left;
+       }
+
+       .pesanan-table th {
+       background-color: #f8f8f8;
+       color: #333;
+       }
+
+
+       @media screen and (max-width: 600px) {
+    
+    
+       .pesanan-table {
+        border: 0;
+       }
+
+    
+       .pesanan-table thead {
+        display: none;
+       }
+
+    
+       .pesanan-table tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ccc; 
+        border-radius: 5px;
+        padding: 10px;
+       }
+
+    
+       .pesanan-table td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative; 
+        padding-left: 50%; 
+       }
+
+    
+       .pesanan-table td::before {
+        content: attr(data-label); 
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+       }
+    
+    
+    .pesanan-table tr td:last-child {
+        border-bottom: 0;
+    }
+    }
     </style>
 </head>
 <body>
