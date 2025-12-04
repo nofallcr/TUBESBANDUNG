@@ -6,7 +6,7 @@ $testimoni = [
         "avatar_color" => "#f4a100",
         "pesan" => "Pengalaman harian yang luar biasa, dan benar-benar sangat menikmatinya",
         "tambahan" => "Vasha & Keluarga"
-    ], // DITAMBAH: Koma dan Penutup Array (])
+    ], 
     [
         "nama" => "Yosua",
         "lokasi" => "Braga",

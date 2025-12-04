@@ -8,6 +8,7 @@ body {
     background-color: #2b3960;
 }
 .logo-image {
+<<<<<<< HEAD
     width: 50px;                
     height: 50px;
     object-fit: cover;           
@@ -18,6 +19,19 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+=======
+    width: 50px;                 
+    height: 50px;
+    object-fit: cover;            
+    border-radius: 50%;           
+    display: block;
+    margin: 0 auto 20px auto;     
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+>>>>>>> 94855c63d413103ee4e77922e8fb5e71d0dbf950
 .logo-image:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);

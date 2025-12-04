@@ -28,7 +28,7 @@ function rp($angka) {
 
 
 $user_email = $_SESSION['email'];
-$user_nama = $_SESSION['nama'] ?? 'Pengguna'; // Gunakan nama jika tersedia
+$user_nama = $_SESSION['nama'] ?? 'Pengguna'; 
 
 
 

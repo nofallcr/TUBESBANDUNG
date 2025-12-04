@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const switchText = document.getElementById("switchText");
     const errorMessage = document.createElement("p"); 
 
+<<<<<<< HEAD
     errorMessage.style.color = "red";
     errorMessage.style.marginTop = "10px";
     errorMessage.id = "errorMessage";
@@ -23,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- Penanganan Pengalihan Mode (Login/Register) ---
+=======
+>>>>>>> 94855c63d413103ee4e77922e8fb5e71d0dbf950
     
     switchModeLink.addEventListener("click", function(e){
         e.preventDefault();
@@ -99,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(data.includes("Login berhasil")){
                 window.location.href = "dashboard.php";
             } else if(data.includes("Registrasi berhasil")){
+<<<<<<< HEAD
                 displayError("Registrasi berhasil! Silakan Login.");
                 
                 
@@ -109,6 +113,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 nameInput.value = "";
             } else {
                 displayError(data); 
+=======
+                switchModeLink.click(); 
+>>>>>>> 94855c63d413103ee4e77922e8fb5e71d0dbf950
             }
             
             submitBtn.textContent = mode === 'login' ? 'Login' : 'Daftar Sekarang';
