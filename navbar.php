@@ -1,3 +1,12 @@
+<?php
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+
+$is_logged_in = isset($_SESSION['user_id']); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +14,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" href="navbar.css?v=<?= filemtime(__DIR__ . '/navbar.css') ?>">
-
 </head>
 <body>
 
@@ -27,8 +35,13 @@
     <a href="Destinasi.php" >Destinasi</a>
     <a href="tentang_kami.php">Tentang Kami</a>
     <a href="hubungi.php">Kontak Kami</a>
-    <a href="login.php">Login</a>
-
+    
+    <?php if ($is_logged_in): ?>
+        <a href="dashboard.php" class="nav-dashboard-btn">Dashboard</a>
+        <a href="logout.php" class="nav-logout-btn">Logout</a>
+    <?php else: ?>
+        <a href="login.php" class="nav-login-btn">Login</a>
+    <?php endif; ?>
     <div class="hamburger" id="hamburger">
     <div></div>
     <div></div>
