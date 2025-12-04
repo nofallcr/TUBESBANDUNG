@@ -36,7 +36,7 @@
 
                 <p class="switch-text">
                     <span id="switchText">Belum punya akun?</span>
-                    <a id="switchModeLink" data-mode="login">Daftar</a>
+                    <a href="#" id="switchModeLink" data-mode="login">Daftar</a>
                 </p>
             </form>
             <p class="switch-text">
