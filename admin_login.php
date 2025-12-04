@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Administrator</title>
+    <title>Login Admin</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="login-container">
         <div class="login-card">
-            <h2 id="formTitle">Login Administrator</h2>
+            <h2 id="formTitle">Login Admin</h2>
             <img src ="foto/LogoExploreBandung.jpeg" alt="Logo Explore Bandung" class="logo-image">
 
             <form id="adminAuthForm" autocomplete="off">
@@ -52,7 +52,7 @@
                 errorMessage.textContent = msg;
             }
 
-            // Fungsi untuk toggle password
+           
             if (togglePassword) {
                 togglePassword.addEventListener('click', function () {
                     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -65,10 +65,10 @@
                 });
             }
 
-            // Handler untuk submit form
+            
             authForm.addEventListener("submit", function(e){
                 e.preventDefault();
-                displayError(""); // Bersihkan pesan error sebelumnya
+                displayError(""); 
                 
                 const username = document.getElementById("username").value.trim();
                 const password = passwordInput.value;
@@ -86,18 +86,18 @@
                 submitBtn.disabled = true; 
                 submitBtn.textContent = "Memproses...";
 
-                // Kirim permintaan ke admin_auth.php
+                
                 fetch("admin_auth.php", {method: "POST", body: formData})
                 .then(res => res.text()) 
                 .then(data => {
                     submitBtn.disabled = false; 
                     
-                    // Cek respons dari PHP. data.trim() digunakan untuk menghilangkan spasi/baris baru.
+                    
                     if(data.trim() === "Login Admin berhasil"){
-                        // **INI ADALAH FUNGSI PENGALIHAN YANG DIMINTA**
+                        
                         window.location.href = "dashboard_admin.php";
                     } else {
-                        // Tampilkan pesan error dari PHP
+                        
                         displayError(data); 
                     }
                     

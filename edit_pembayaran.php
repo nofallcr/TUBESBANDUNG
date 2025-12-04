@@ -2,7 +2,7 @@
 session_start();
 include "koneksi.php";
 
-// Verifikasi Admin
+
 if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
     header("Location: login.php");
     exit;
@@ -12,7 +12,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $message = "";
 $data = null;
 
-// PROSES UPDATE DATA
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $id = (int)$_POST['id'];
     $nama_pemesan = mysqli_real_escape_string($conn, $_POST['nama_pemesan']);
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $metode_pembayaran = mysqli_real_escape_string($conn, $_POST['metode_pembayaran']);
     $status = mysqli_real_escape_string($conn, $_POST['status']);
     
-    // Perintah SQL untuk UPDATE
+    
     $query_update = "UPDATE pembayaran SET 
                      nama_pemesan='$nama_pemesan', email_pemesan='$email_pemesan', telepon_pemesan='$telepon_pemesan', 
                      jumlah_tiket=$jumlah_tiket, paket_wisata='$paket_wisata', lokasi_wisata='$lokasi_wisata', 
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     }
 }
 
-// AMBIL DATA LAMA (untuk ditampilkan di form)
+
 if ($id > 0) {
     $query_select = "SELECT * FROM pembayaran WHERE id = $id";
     $result_select = mysqli_query($conn, $query_select);
@@ -52,10 +52,6 @@ if (!$data) {
     mysqli_close($conn);
     exit;
 }
-
-// Menutup koneksi hanya setelah semua data diambil dan diproses
-// Perhatikan bahwa jika POST berhasil, koneksi ditutup secara otomatis saat script selesai.
-// Jika di GET, koneksi ditutup di akhir script ini.
 
 ?>
 <!DOCTYPE html>

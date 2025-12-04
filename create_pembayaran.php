@@ -2,7 +2,6 @@
 session_start();
 include "koneksi.php";
 
-// Verifikasi Admin
 if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
     header("Location: login.php");
     exit;
@@ -10,9 +9,8 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
 
 $message = "";
 
-// PROSES INSERT DATA
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil dan sanitasi semua input
+    
     $nama_pemesan = mysqli_real_escape_string($conn, $_POST['nama_pemesan']);
     $email_pemesan = mysqli_real_escape_string($conn, $_POST['email_pemesan']);
     $telepon_pemesan = mysqli_real_escape_string($conn, $_POST['telepon_pemesan']);
@@ -23,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $metode_pembayaran = mysqli_real_escape_string($conn, $_POST['metode_pembayaran']);
     $status = mysqli_real_escape_string($conn, $_POST['status']);
     
-    // Perintah SQL untuk INSERT
+    
     $query = "INSERT INTO pembayaran 
               (nama_pemesan, email_pemesan, telepon_pemesan, jumlah_tiket, paket_wisata, lokasi_wisata, total_bayar, metode_pembayaran, status) 
               VALUES 

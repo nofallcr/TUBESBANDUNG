@@ -2,7 +2,7 @@
 session_start();
 include "koneksi.php";
 
-// Verifikasi Admin
+
 if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
     header("Location: login.php");
     exit;
@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 if ($id > 0) {
-    // Perintah SQL untuk DELETE
+    
     $query = "DELETE FROM pembayaran WHERE id = $id";
     
     if (mysqli_query($conn, $query)) {
@@ -25,7 +25,7 @@ if ($id > 0) {
 
 mysqli_close($conn);
 
-// Redirect kembali ke dashboard dengan status
+
 header("Location: dashboard_admin.php?status=" . $status);
 exit;
 ?>

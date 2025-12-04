@@ -2,8 +2,6 @@
 session_start();
 include "koneksi.php"; 
 
-// 1. === VERIFIKASI ADMIN ===
-// Memastikan admin sudah login (session 'user_type' = 'admin' diset oleh admin_auth.php)
 if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') { 
     header("Location: login.php");
     exit;
@@ -12,8 +10,6 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
 $admin_id = $_SESSION['user_id']; 
 $admin_nama = $_SESSION['nama']; 
 
-// 2. === LOGIKA PHP UNTUK ADMIN DASHBOARD ===
-// Mengambil semua data pembayaran untuk CRUD/Monitoring
 $query_pembayaran = "
     SELECT 
         id, nama_pemesan, paket_wisata, total_bayar, status, tanggal_transaksi
@@ -24,7 +20,7 @@ $query_pembayaran = "
 
 $result_pembayaran = mysqli_query($conn, $query_pembayaran);
 
-// Mengambil total semua pesanan
+
 $query_count = "SELECT COUNT(id) as total_pesanan FROM pembayaran";
 $result_count = mysqli_query($conn, $query_count);
 $total_pesanan = 0;
@@ -33,7 +29,7 @@ if ($result_count) {
     $total_pesanan = $data_count['total_pesanan'];
 }
 
-// 3. LOGIKA PESAN STATUS (Penting untuk feedback CRUD)
+
 $status_message = '';
 if (isset($_GET['status'])) {
     $status = $_GET['status'];
@@ -48,7 +44,7 @@ if (isset($_GET['status'])) {
     }
 }
 
-// Menutup koneksi database setelah semua data diambil
+
 mysqli_close($conn); 
 
 function rp($angka) {
@@ -63,7 +59,7 @@ function rp($angka) {
 <title>Admin Dashboard | Explore Bandung</title>
 <link rel="stylesheet" href="dashboard.css?v=<?= filemtime(__DIR__ . '/dashboard.css') ?>">
 <style>
-/* Styling tambahan dari kode Anda */
+
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -94,7 +90,7 @@ function rp($angka) {
 .status-pending { color: white; background-color: orange; padding: 4px 8px; border-radius: 4px; }
 .status-cancelled { color: white; background-color: red; padding: 4px 8px; border-radius: 4px; }
 
-/* Styling untuk pesan status */
+
 .alert {
     padding: 15px;
     border-radius: 4px;
