@@ -68,67 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <title>Form Pemesanan Wisata</title>
 
 <link rel="stylesheet" href="order.css?v=<?= filemtime(__DIR__ . '/order.css') ?>">
-<style>
-* { 
-  margin:0;
-  padding:0; 
-  box-sizing:border-box; 
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-body { 
-  background-color: #1a233b; 
-  color: #b9d0fb; 
-  padding: 20px; }
-
-.container { 
-  max-width:600px; 
-  margin:30px auto; 
-  background-color:#252f4a; 
-  padding:30px; 
-  border-radius:15px; 
-  box-shadow:0 0 15px rgba(0,0,0,0.5); }
-
-h2 { 
-  text-align:center; 
-  margin-bottom:20px; 
-  color:#76c7ff; }
-
-label { 
-  display:block; 
-  margin-bottom:5px; 
-  color:#cce0ff; }
-
-input, select, button { 
-  width:100%; 
-  padding:10px; 
-  margin-bottom:15px; 
-  border-radius:8px; 
-  border:none; 
-  font-size:16px; }
-
-input, select { 
-  background-color:#1a233b; 
-  color:#b9d0fb; 
-  border:1px solid #3a4563; }
-
-input:focus, select:focus { 
-  outline:none; 
-  border:1px solid #76c7ff; }
-
-button { 
-  background-color:#76c7ff; 
-  color:#1a233b; 
-  font-weight:bold; 
-  cursor:pointer; 
-  transition:0.3s; }
-
-button:hover { 
-  background-color:#5aa0e0; }
-
-option { 
-  background-color:#1a233b; 
-  color:#b9d0fb; }
-</style>
 
 </head>
 <body>
@@ -136,7 +75,7 @@ option {
 <div class="container">
 <h2>Form Pemesanan Paket Wisata</h2>
 
-<form action="" method="POST" id="formOrder">
+<form action="" method="POST" id="formOrder" autocomplete="off">
 
     <label>Nama Pemesan:</label>
     <input type="text" name="nama_pemesan" required>
