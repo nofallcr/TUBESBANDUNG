@@ -33,7 +33,6 @@ if($mode == "register"){
 
     $_SESSION['user_id'] = $result['id'];
     $_SESSION['nama'] = $result['nama'];
-    $conn->query("UPDATE users SET is_logged_in=1 WHERE id=".$result['id']);
     echo "Login berhasil! Selamat datang, ".$result['nama'];
 }
 ?>

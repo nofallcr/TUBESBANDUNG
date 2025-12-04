@@ -1,12 +1,12 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = ""; // kosong jika default XAMPP
-$db   = "login"; // nama database
+$pass = "";
+$db   = "db_wisata";
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = mysqli_connect($host, $user, $pass, $db);
 
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
 ?>
