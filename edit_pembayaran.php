@@ -59,7 +59,7 @@ if (!$data) {
 <head>
     <meta charset="UTF-8">
     <title>Edit Transaksi Pembayaran</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="dashboard.css?v=<?= filemtime(__DIR__ . '/dashboard.css') ?>">
     <style> .form-group { margin-bottom: 15px; } input[type="text"], input[type="email"], input[type="number"], select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; } </style>
 </head>
 <body>

@@ -75,7 +75,7 @@ $tanggal_transaksi_key = 'tanggal_transaksi';
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f7f9;
+            background-color: #253d5f;
             display: flex;
             justify-content: center;
             align-items: flex-start;
