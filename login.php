@@ -184,13 +184,13 @@
                         displayError(data); 
                     }
                     
-                    submitBtn.textContent = mode === 'login' ? 'Login' : 'Daftar Sekarang';
+                    submitBtn.textContent = mode === 'Login' ? 'Login' : 'Login';
 
                 })
                 .catch(error => {
                     displayError("Terjadi kesalahan jaringan atau server tidak merespons.");
                     submitBtn.disabled = false;
-                    submitBtn.textContent = mode === 'login' ? 'Login' : 'Daftar Sekarang';
+                    submitBtn.textContent = mode === 'Login' ? 'Login' : 'Login';
                     console.error('Error:', error);
                 
                 });

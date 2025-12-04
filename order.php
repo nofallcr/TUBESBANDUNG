@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <label>Metode Pembayaran:</label>
     <select name="metode_pembayaran" required>
-        <option value="transfer">Pembayaran setelah kunjungan</option>
+        <option value="Pembayaran setelah kunjungan">Pembayaran setelah kunjungan</option>
     </select>
 
 
