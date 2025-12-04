@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    background: #f2ebdf;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #4a332d;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.search-box {
+    width: 40%;
+    padding: 7px 12px;
+    border-radius: 20px;
+    border: none;
+}
+
+.icons i {
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* CONTENT */
+.content {
+    padding: 20px;
+}
+
+/* USER CARD */
+.user-card {
+    background: #f7f1e6;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.logout-btn {
+    margin-left: auto;
+    padding: 8px 15px;
+    background: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* SECTION */
+.section-title {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+/* STATS */
+.stats-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.stat-box {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.green { background: #2ecc71; }
+.red { background: #e74c3c; }
+
+/* PRODUCT BOX */
+.product-box {
+    margin-top: 15px;
+    background: #ece4d7;
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+}
+
+.add-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #4a332d;
+    color: white;
+    border: none;
+    font-size: 22px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data=>{
             alert(data);
             if(data.includes("Login berhasil")){
-                window.location.href = "beranda.php";
+                window.location.href = "dashboard.php";
             } else if(data.includes("Registrasi berhasil")){
                 switchModeLink.click(); // balik ke login
             }
