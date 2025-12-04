@@ -40,10 +40,13 @@
                 </p>
             </form>
             <a href="beranda.php" class="back-btn">← Kembali ke Beranda</a>
-
         </div>
     </div>
-    <script>
+    <p class="switch-text" style="margin-top: 10px;">
+    <a href="admin_login.php">Login sebagai Administrator</a>
+</p>
+</body>
+<script>
         document.addEventListener("DOMContentLoaded", function() {
             const authForm = document.getElementById("authForm");
             const submitBtn = document.getElementById("submitBtn");
@@ -194,5 +197,4 @@
             });
         });   
     </script>
-</body>
 </html>
