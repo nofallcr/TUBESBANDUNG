@@ -4,15 +4,22 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-
 $is_logged_in = isset($_SESSION['user_id']); 
+$user_type = $_SESSION['user_type'] ?? 'user'; 
+
+if ($user_type === 'admin') {
+    $dashboard_link = 'dashboard_admin.php';
+} else {
+    $dashboard_link = 'dashboard.php';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navbar | Explore Bandung</title> <link rel="stylesheet" href="navbar.css?v=<?= filemtime(__DIR__ . '/navbar.css') ?>">
+<title>Navbar | Explore Bandung</title> 
+<link rel="stylesheet" href="navbar.css">
 </head>
 <body>
 
@@ -35,12 +42,15 @@ $is_logged_in = isset($_SESSION['user_id']);
         <a href="hubungi.php">Kontak Kami</a>
         
         <?php if ($is_logged_in): ?>
-            <a href="dashboard.php" class="nav-dashboard-btn">Dashboard</a>
+            <a href="<?= $dashboard_link ?>" class="nav-dashboard-btn">Dashboard</a>
             <a href="logout.php" class="nav-logout-btn">Logout</a>
         <?php else: ?>
             <a href="login.php" class="nav-login-btn">Login</a>
         <?php endif; ?>
         </nav>
+
+        
+
     
     <div class="hamburger" id="hamburger">
         <div></div>
