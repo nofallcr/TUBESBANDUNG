@@ -9,13 +9,12 @@ Explore Bandung
 Sebuah web destinasi wisata Bandung
 
 ### 🧑‍🧑‍🧒‍🧒Our Group
-| No | Nama Anggota                    
-| 1  | **Farel Yamotaro Hia**          
-| 2  | **Naufal Dzaki**
-| 3  | **Albariqi** 
-| 4  | **Cinta Pardame**
-| 5  | **Fira Aulia**          
-| 6  | **Vascha Lumbantoruan**         
+## Farel Yamotaro Hia
+## Naufal Dzaki
+## Albariqi
+## Cinta Pardame
+## Fira Aulia          
+## Vascha Lumbantoruan         
 
 ## 🧐Fitur yang ada di program
 
