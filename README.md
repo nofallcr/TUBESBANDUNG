@@ -9,13 +9,13 @@ Explore Bandung
 Sebuah web destinasi wisata Bandung
 
 ### 🧑‍🧑‍🧒‍🧒Our Group
-| No | Nama Anggota                       | NIM / ID  | Peran dalam Kelompok | Status   |
-| -- | ---------------------------------- | --------- | -------------------- | -------- |
-| 1  | **Farel Yamotaro Hia**             | 251402069 | Anggota              | 🟢 Aktif |
-| 2  | **M. Vasha Nadar**                 | 251402019 | Anggota              | 🟢 Aktif |
-| 3  | **Rodotua Naomi Mutiara Simamora** | 251402030 | Anggota              | 🟢 Aktif |
-| 4  | **Vedder Timothy Simbolon**        | 251402072 | Anggota              | 🟢 Aktif |
-| 5  | **Gabriel Saurman Parhusip**       | 251402043 | Anggota              | 🟢 Aktif |
+| No | Nama Anggota                    
+| 1  | **Farel Yamotaro Hia**          
+| 2  | **Naufal Dzaki**
+| 3  | **Albariqi** 
+| 4  | **Cinta Pardame**
+| 5  | **Fira Aulia**          
+| 6  | **Vascha Lumbantoruan**         
 
 ## 🧐Fitur yang ada di program
 
