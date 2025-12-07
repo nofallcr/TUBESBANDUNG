@@ -22,5 +22,5 @@ Sebuah web destinasi wisata Bandung
 ### Galeri
 ### Destinasi Unggulan
 ### Pesan
-### Admim
+### Admin
 ### CRUD
