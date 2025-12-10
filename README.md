@@ -12,7 +12,6 @@
 ### Untuk Pengguna (User & Guest)
 * **Pencarian & Eksplorasi:** Pengguna dapat melihat beranda dan halaman pencarian untuk menemukan paket wisata.
 * **Pemesanan Paket:** Proses *checkout* yang mudah dan terintegrasi untuk pembelian paket wisata.
-* **Rating & Ulasan:** Pengguna dapat memberikan *rating* dan ulasan setelah menyelesaikan perjalanan.
 * **Autentikasi:** Fitur Register dan Login untuk mengelola riwayat pemesanan.
 
 ### Untuk Admin
